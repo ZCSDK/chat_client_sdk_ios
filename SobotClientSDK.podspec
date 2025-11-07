@@ -14,10 +14,18 @@ DESC
 
   s.author       = { 'sobot' => 'app_dev@sobot.com' }
 
-  s.platform     = :ios, "11.0"
+  s.platform     = :ios, "13.0"
   
   #依赖库不支持i386
-  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64' }
+  #s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64' }
+# 架构和 Swift 配置
+  s.pod_target_xcconfig = {
+    'VALID_ARCHS' => 'arm64 x86_64',
+    'SWIFT_VERSION' => '5.0',
+    'SWIFT_OPTIMIZATION_LEVEL' => '-Onone',
+    'ENABLE_BITCODE' => 'NO'
+  }
+
 
   #s.user_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
 
@@ -31,7 +39,7 @@ DESC
 #  s.ios.vendored_frameworks = 'SobotKit.xcframework'
 
 # 工程配置
-#  s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
-#  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 
 end
