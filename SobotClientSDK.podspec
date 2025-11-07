@@ -14,7 +14,7 @@ DESC
 
   s.author       = { 'sobot' => 'app_dev@sobot.com' }
 
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "11.0"
   
   #依赖库不支持i386
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64' }
