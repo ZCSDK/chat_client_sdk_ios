@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
  Sobot SDKv7 Visitor Side provides enterprises with a complete set of intelligent customer service solutions. Sobot Customer Service SDK includes both customer service business logic and interactive interfaces. Enterprises can integrate Sobot Customer Service into their App with just two simple steps, enabling the App to have 7*24 hour customer service capabilities. 
 DESC
 
-  s.homepage     = "https://gitee.com/ZCSobot/chat_client_sdk_ios.git"
+  s.homepage     = "https://github.com/ZCSDK/chat_client_sdk_ios.git"
 
   s.license      = "MIT"
 
@@ -21,7 +21,7 @@ DESC
 
   #s.user_target_xcconfig = {'OTHER_LDFLAGS' => ['-lObjC','-all_load']}
 
-  s.source       = { :git => "https://gitee.com/ZCSobot/chat_client_sdk_ios.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/ZCSDK/chat_client_sdk_ios.git", :tag => s.version }
 
   s.resources = 'SobotKit.bundle'
   s.ios.vendored_frameworks = 'SobotKit.framework','SobotChatClient.framework','SobotCommon.framework'
