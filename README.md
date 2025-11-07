@@ -76,9 +76,7 @@ Add to the Podfile:
 
 ```js  
 // Standard Version:
-pod 'SobotChatClient'
-// E-commerce Version:
-pod 'SobotChatClientMall'
+pod 'SobotClientSDK'
 ```
 
 
