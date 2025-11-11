@@ -117,6 +117,18 @@ NSLayoutConstraint *sobotLayoutUpdateVerticalDistanceBottom(UIView *view,UIView 
 NSLayoutConstraint *sobotLayoutUpdateViewHeight(UIView *view,float constant);
 NSLayoutConstraint *sobotLayoutUpdateViewWidth(UIView *view,float constant);
 
+// Anchor方式设置同向的约束
+NSLayoutConstraint *sobotLayoutLeft(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutRight(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutTop(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutBottom(CGFloat constant,UIView *view,UIView *otherView);
+
+// Anchor方式设置相邻的间隔约束
+NSLayoutConstraint *sobotLayoutLeftMargin(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutRightMargin(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutTopMargin(CGFloat constant,UIView *view,UIView *otherView);
+NSLayoutConstraint *sobotLayoutBottomMargin(CGFloat constant,UIView *view,UIView *otherView);
+
 @end
 
 NS_ASSUME_NONNULL_END
