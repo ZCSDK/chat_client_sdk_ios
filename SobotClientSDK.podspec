@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SobotClientSDK"
-  s.version      = "4.3.0.1"
+  s.version      = "4.3.0"
   s.summary      = "iOS SobotClientSDK v7"
   s.description      = <<-DESC
  Sobot SDKv7 Visitor Side provides enterprises with a complete set of intelligent customer service solutions. Sobot Customer Service SDK includes both customer service business logic and interactive interfaces. Enterprises can integrate Sobot Customer Service into their App with just two simple steps, enabling the App to have 7*24 hour customer service capabilities. 
