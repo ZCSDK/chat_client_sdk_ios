@@ -683,6 +683,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SobotChatContent : SobotBaseEntity
 
+// 富文本图片尺寸缓存（使用NSCache自动管理内存）key:图片URL value:@{@"width":@(width), @"height":@(height)}
+@property (nonatomic, strong) NSCache *imageSizeCache;
+
 // msgType =0/1，图片和文本
 @property(nonatomic,copy) NSString *content;
 
@@ -820,6 +823,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *nodeId;
 // 按钮的数据 字符串
 @property (nonatomic,strong) NSMutableArray *variableValueEnums;
+// 记录当前是显示的第几页
+@property (nonatomic,assign) int currentPage;
+
 @property (nonatomic,assign) int clickFlag;//": "临时文案" 记录是否可以点击
 /**********************大模型机器人新增消息类型 枚举 回答显示成卡片的样式 历史记录不用处理*****end*****************/
 /**

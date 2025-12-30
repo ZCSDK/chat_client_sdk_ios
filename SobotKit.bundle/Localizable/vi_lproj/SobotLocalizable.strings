@@ -308,3 +308,16 @@
 
 "是否解决：" = "Giải quyết: ";
 "标签：" = "Thẻ: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "Thông tin truy cập của bạn không được xác minh, tạm thời không thể kết nối với dịch vụ khách hàng.";
+"访问信息验证不通过" = "Xác minh thông tin truy cập không thành công";
+"内容由 AI 生成" = "Nội dung được tạo bởi AI";
+
+"麦克风权限未开启" = "Không thể truy cập micro";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Để ghi âm, hãy cho phép quyền micro trong “Cài đặt” > “Ứng dụng” > “%@” > “Quyền”.";
+"继续拍摄"= "Tiếp tục ghi âm";
+"去设置"= "Đi đến Cài đặt";
+"未开启麦克风，无法录制声音" = "Micro chưa được bật. Không thể ghi âm.";
+
+"同意" = "Đồng ý";
+"我已阅读并同意%@。" = "Tôi đã đọc và đồng ý với %@.";

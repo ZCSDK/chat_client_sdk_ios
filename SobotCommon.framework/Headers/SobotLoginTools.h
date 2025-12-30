@@ -177,6 +177,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 登录后请求header
 /// - Parameter timeOut: 请求超时时间，秒
 -(NSDictionary *) getSignHeaderDict:(int) timeOut;
+-(NSDictionary *) getSignHeaderDict:(int) timeOut version:(NSString *)version;
 
 
 

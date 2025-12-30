@@ -308,3 +308,17 @@
 
 "是否解决：" = "Si se resuelve: ";
 "标签：" = "Etiquetas: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "La verificación de su información de acceso no ha sido exitosa, por lo que no puede conectarse al agente por el momento.";
+"访问信息验证不通过" = "La verificación de la información de acceso no ha sido aprobada.";
+"内容由 AI 生成" = "Contenido generado por IA";
+
+"麦克风权限未开启" = "No se puede acceder al micrófono";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Para grabar audio, permita el acceso al micrófono en \"Ajustes > Aplicaciones > %@ > Permisos\" en su dispositivo.";
+"继续拍摄"= "Seguir grabando";
+"去设置"= "Ir a establecer";
+"未开启麦克风，无法录制声音" = "El micrófono no está habilitado. No se puede grabar audio.";
+
+
+"同意" = "Aceptar";
+"我已阅读并同意%@。" = "He leído y acepto los %@.";

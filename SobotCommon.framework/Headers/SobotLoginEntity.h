@@ -197,6 +197,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 以下字段，在线管理员使用
 @property (nonatomic,strong) NSString * transferId;
 @property (nonatomic,strong) NSString * uname;
+// 转换成拼音
+@property (nonatomic,strong) NSString * unamePY;
+
 @property (nonatomic,assign) int        currentServiceCount;
 
 
@@ -365,6 +368,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 是否启动socket.io
 // true：使用socket.io;false:使用旧版本stomp
 @property (nonatomic,assign) BOOL  enableSocketIO;
+
+
+/**
+     * 接待模式 0-实时，1-异步(有挂起功能)
+     */
+@property (nonatomic,assign) int  assignmentMode;
 
 // key : SOBOT_LOGIN_MODULE_KEY_
 -(BOOL)checkModule:(NSString *) key;

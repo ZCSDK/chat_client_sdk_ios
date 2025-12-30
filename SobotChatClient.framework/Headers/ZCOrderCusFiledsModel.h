@@ -41,6 +41,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString * value;// 自定义字段值
 @property (nonatomic,copy) NSString * text;// 自定义字段值
 
+// 时区+ 日期时间 特殊字段处理
+@property (nonatomic,copy) NSString *timezoneId;
+@property (nonatomic,copy) NSString *resultText;
+
 
 @property (nonatomic,strong) NSMutableArray * detailArray;// 多选，单选 下拉列表 的数据
 @property (nonatomic,strong) NSString * fieldSaveValue;// 存储当前自定义字段填写的值

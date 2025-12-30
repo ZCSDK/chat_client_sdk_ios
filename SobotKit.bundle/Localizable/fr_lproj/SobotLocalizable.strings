@@ -309,3 +309,16 @@
 
 "是否解决：" = "Est - ce résolu: ";
 "标签：" = "Étiquette: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "La vérification de vos informations de visite a échoué, vous ne pouvez pas accéder à l'agent pour le moment.";
+"访问信息验证不通过" = "La vérification des informations d'accès a échoué.";
+"内容由 AI 生成" = "Contenu généré par Génération d'IA";
+
+"麦克风权限未开启" = "Impossible d'accéder au microphone";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Pour enregistrer le son, accordez des autorisations d'accès à votre microphone dans « Paramètres » > « Applications» > « %@» ><Autorisations » sur votre appareil.";
+"继续拍摄"= "Continuer à enregistrer";
+"去设置"= "Aller définir";
+"未开启麦克风，无法录制声音" = "licrophone non activé. Impossible d'enregistrer le son";
+
+"同意" = "Accepter";
+"我已阅读并同意%@。" = "J’ai lu et j’accepte les %@.";

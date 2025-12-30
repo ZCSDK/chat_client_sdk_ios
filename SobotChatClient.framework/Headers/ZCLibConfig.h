@@ -18,6 +18,11 @@
  */
 @interface ZCLibConfig : NSObject
 
+// 440 新增  控制留言按钮显隐  判断条件，开启待分配池，并且当前是转人工排队，并且 robotAnswerRule=0（停止接待）时，实时/异步模式下进入排队或待分配阶段需屏蔽留言按钮。
+// 转人工之后该开关不再起效，仅机器人接待时有效
+@property(nonatomic,assign)int robotAnswerRule;
+
+
 /**
  * 主题色按钮和气泡背景上边的文字图标颜色模式：0：白色#FFFFFFF：1：黑色 #1616161(对比后的结果，具体颜色用本地)
  *  这里用字符串方便判断接口有没有返回数据
@@ -34,6 +39,9 @@
 @property(nonatomic,copy) NSString *rebotThemeStyle;// 主题模式0-浅色，1-深色，2-跟随系统
 // V7 新增待定池方案  //接待模式 0-实时，1-异步  跨包使用，同步zcuicore 中的数据，临时变量，
 @property(nonatomic,assign) int tempAssignmentMode;
+
+// 440版本开始 转人工排队并且 robotAnswerRule = 0 可以给机器人发送消息，但是不回显机器人消息，记录进入异步模式待分配池，或者实时模式下转人工排队中
+@property(nonatomic,assign) BOOL tempRobotAnswerRule;
 
 // V7 当前是pending pending ：true 表示在待分配会话池里，需要展示待分配说辞和隐藏转人工按钮
 @property(nonatomic,assign) BOOL pending;
@@ -376,6 +384,9 @@
 ///
 @property (nonatomic, assign) BOOL      aiAgent;
 @property (nonatomic, copy) NSString *aiAgentCid;
+
+// 4.4.0 新增，有值说明是海外版
+@property (nonatomic , strong) NSString *sdkVer;
 
 /*
  *  通告是否置顶

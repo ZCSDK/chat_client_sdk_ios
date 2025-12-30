@@ -30,8 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString *topBarFontIconColorStyle;
 @property(nonatomic,copy) NSString *topBarFontIconColor;
 @property(nonatomic,copy) NSString *rebotThemeStyle;// 主题模式0-浅色，1-深色，2-跟随系统
-
-
+// 获取帮助中心的返回的语言，主要是同步镜像
+@property(nonatomic,copy) NSString *language;
 
 //访客配置：
 //{"pageNo":null,"pageCount":null,"totalCount":null,"pageSize":null,"retCode":"000000","retMsg":"操作成功","data":{"rebotTheme":"#4ADABE,#0DAEAF","topBarColor":"#4ADABE,#0DAEAF","hotlineName":"服务热线收到撒旦范德萨范德萨范德萨发大师傅士大夫大师傅士大夫大师傅士大夫的十分士大夫但是f","hotlineTel":"10001000",

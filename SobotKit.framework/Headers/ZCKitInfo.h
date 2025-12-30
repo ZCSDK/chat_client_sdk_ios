@@ -17,9 +17,10 @@
  */
 @interface ZCKitInfo : NSObject
 
-
-// 关闭SDK父类semanticContentAttribute设置
-@property (nonatomic,assign) BOOL isCloseBaseSemanticContentAttribute;
+// 是否隐藏工单里边拍照按钮。默认NO:显示，YES:隐藏，默认NO
+@property (nonatomic,assign) BOOL isHideTicketCameraBtn;
+// 开启系统semanticContentAttribute设置,默认NO不设置
+@property (nonatomic,assign) BOOL openBaseSemanticContentAttribute;
 
 
 // 取消左滑sdk手势代理，默认NO 开启 设置YES SDK将不再设置左滑手势代理

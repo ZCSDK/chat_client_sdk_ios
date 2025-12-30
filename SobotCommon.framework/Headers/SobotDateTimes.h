@@ -77,6 +77,16 @@ NSDate * sobotStringFormateDate(NSString * stringDate);
 /// - Parameter stringDate: 时间戳
 NSDate *sobotLongTimeToDate(NSString *stringDate);
 
+
+/// 计算多少秒之后的时间
+/// - Parameters:
+///   - currentDate: 当前标准时间
+///   - second: 秒，如果是负值，则为多少秒之前
+NSDate *sobotAddSecondToDate(NSDate *currentDate,NSInteger second);
+
+NSDate *sobotAddDayToDate(NSDate *currentDate,NSInteger day);
+NSDate *sobotAddMonthToDate(NSDate *currentDate,NSInteger month);
+
 /**
  *  计算日期与当前时间的差
  */

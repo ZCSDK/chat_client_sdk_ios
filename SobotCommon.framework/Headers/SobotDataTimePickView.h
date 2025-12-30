@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 默认拼接yyyy-MM-dd HH:mm:ss,设置YES后，返回yyyy-MM-dd HH:mm
 @property (nonatomic,assign) BOOL existMinute;
 
+// 最小时间
+@property (nonatomic,assign) BOOL limitMinDate;
+
 // 如果已经有选中的时区，可以配置
 @property (nonatomic,strong)NSDictionary *checkedTimeZone;
 

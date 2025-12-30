@@ -26,7 +26,7 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
 /// @param errorBlock 接口失败
 /// @param appIdIncorrectBlock 参数异常(未初始化[configSobotSDK]/appkey错误)
 +(void)initSobotChat:(void (^)(ZCLibConfig *config))successBlock
-               error:(void (^)(ZCNetWorkCode status,NSString *errorMessage))errorBlock
+               error:(void (^)(ZCNetWorkCode status,NSString *errorMessage,id _Nullable initObj))errorBlock
       appIdIncorrect:(void (^)(NSString *appId))appIdIncorrectBlock;
 
 

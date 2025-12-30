@@ -19,9 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong) NSString *pageTitle;
 
+@property(nonatomic,strong) UILabel *titleLab;
+@property(nonatomic,strong) UIButton *closeBtn;
+
 @property(nonatomic, strong) UIView *searchView;
 @property (nonatomic,strong) UITextField *textField;
 @property(nonatomic,strong) UITableView *listTable;
+@property (nonatomic,assign) CGFloat cellHeight;
 //     线条
 @property(nonatomic,strong)  UIView *topBottomLine;
 
@@ -46,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 1 总结分类
 @property (nonatomic, strong)  void(^ChooseResultBlock) (id _Nullable item,NSString *names,NSString *ids);
 
+// type 关闭类型，默认0
+@property (nonatomic, strong)  void(^CloseBlock) (int type);
+
 // table始终显示的值
 @property(nonatomic,strong)NSMutableArray   *listArray;
 
@@ -56,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSDictionary *checkItem;// 用于UI显示比对
 
 -(SobotSheetSelectView *)initAlterView:(NSString *) title;
-
+-(SobotSheetSelectView *)initAlterView:(NSString *) title isRTL:(BOOL)isRTL;
 - (void)showInView:(UIView * _Nullable)view;
 
 - (void)closeSheetView;
@@ -64,7 +71,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)reSetViewHeight;
 
 
+@property(nonatomic,strong) NSMutableArray *defArray;
 -(void)textChangAction:(UITextField *)textField;
+// 重写可以修改规则
+-(void)actionSearch:(NSString *) searchText;
 -(void)buttonCommit;
 
 /***

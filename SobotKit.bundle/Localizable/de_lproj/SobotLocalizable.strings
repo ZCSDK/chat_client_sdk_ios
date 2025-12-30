@@ -310,3 +310,17 @@
 
 "是否解决：" = "Behoben: ";
 "标签：" = "Etikett: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "Ihre Besucherinformationen konnten nicht verifiziert werden, daher ist ein Zugriff auf den Agenten vorübergehend nicht möglich.";
+"访问信息验证不通过" = "Zugriffsüberprüfung fehlgeschlagen";
+"内容由 AI 生成" = "Inhalt von KI-Generierung";
+
+"麦克风权限未开启" = "Mikrofonzugriff nicht möglich";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Erteilen Sie zum Aufnehmen von Audio die Mikrofonberechtigungen in „Einstellungen > Apps > %@ > Berechtigungen\" Ihres Geräts.";
+"继续拍摄"= "Aufnahme fortsetzen";
+"去设置"= "Zum Festlegen";
+"未开启麦克风，无法录制声音" = "Mikrofon nicht aktiviert. Das Audio kann nicht aufgenommen werden.";
+
+
+"同意" = "Zustimmen";
+"我已阅读并同意%@。" = "Ich habe die %@ gelesen und stimme ihnen zu.";

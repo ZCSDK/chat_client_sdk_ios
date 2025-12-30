@@ -311,3 +311,16 @@
 
 "是否解决：" = "Selesai: ";
 "标签：" = "Label: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "Informasi kunjungan Anda tidak lolos verifikasi, untuk sementara tidak dapat mengakses agen.";
+"访问信息验证不通过" = "Verifikasi informasi akses tidak berhasil";
+"内容由 AI 生成" = "Konten oleh Generasi AI";
+
+"麦克风权限未开启" = "Tidak Dapat Mengakses Mikrofon";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Untuk merekam audio, beri izin mikrofon di \"Pengaturan perangkat Anda > Aplikasi > %@ > Izin\".";
+"继续拍摄"= "Terus Merekam";
+"去设置"= "Atur";
+"未开启麦克风，无法录制声音" = "Mikrofon tidak diaktifkan. Tidak dapat merekam audio.";
+
+"同意" = "Setuju";
+"我已阅读并同意%@。" = "Saya telah membaca dan menyetujui %@.";

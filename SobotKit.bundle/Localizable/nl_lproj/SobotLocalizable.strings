@@ -367,3 +367,16 @@
 
 "是否解决：" = "Opgelost: ";
 "标签：" = "Label: ";
+
+"您的访问信息验证不通过，暂时不能接入客服" = "Uw toegangsgegevens zijn niet geverifieerd, u kunt tijdelijk geen contact opnemen met de klantenservice.";
+"访问信息验证不通过" = "Toegangsgegevensverificatie mislukt";
+"内容由 AI 生成" = "Inhoud gegenereerd door AI";
+
+"麦克风权限未开启" = "Microfoonrechten zijn niet ingeschakeld";
+"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Kan geen geluid opnemen. Ga naar \"Instellingen > Apps > %@> Machtigingen\" en schakel de microfoonmachtiging in.";
+"继续拍摄"= "Doorgaan met filmen";
+"去设置"= "Naar instellingen gaan";
+"未开启麦克风，无法录制声音" = "Microfoon is niet ingeschakeld, geluidsopname is niet mogelijk.";
+
+"同意" = "Akkoord";
+"我已阅读并同意%@。" = "Ik heb de %@ gelezen en ga ermee akkoord.";

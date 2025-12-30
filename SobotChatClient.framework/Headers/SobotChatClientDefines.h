@@ -67,6 +67,10 @@ typedef NS_ENUM(NSInteger, ZCNetWorkCode) {
              大模型机器人发送失败 清理掉正在显示的加载数据消息动画样式
      */
     ZC_NETWORK_AI_Refresh_clear = 4,
+    /**
+             大模型机器人 点踩点赞 显示
+     */
+    ZC_NETWORK_AI_COMMENT_TYPE = 5,
     
     /**
      *  连接失败。

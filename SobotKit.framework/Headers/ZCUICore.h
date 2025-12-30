@@ -100,6 +100,7 @@ typedef NS_ENUM(NSInteger,ZCShowStatus) {
     /** 设置输入框引导排队文案 */
     ZCSetKeyBoardTextViewChangeTip          = 41,
     ZCSetShowNOLeaveAndNTurn = 42,// 关闭页面中所有的转人工入口，（快捷菜单 + 更多 + （点踩 点赞 转人工））
+    ZCShowStatusAIMessageChanged   = 43,  // 大模型机器人消息 更新点踩点赞
 };
 
 typedef NS_ENUM(NSInteger,ZCInitStatus) {
@@ -146,6 +147,14 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 // 本地临时记录是否当前是第三种的接待状态  待分配池中  默认是0 ，转人工接口返回具体数据，转人工成功之后要回执成0 结束会话的时候也回执成0
 // V7 新增待定池方案  //接待模式 0-实时，1-异步
 @property(nonatomic,assign) int assignmentMode;
+
+// V7 新增临时变量 ，转人工排队时，如果开启了机器人不在接待的开关= 0 ，不展示留言入口，和给机器人发送消息，不在回显，转人工成功之后再回执
+// 默认NO
+@property(nonatomic,assign) BOOL tempRobotAnswerRule;
+// V7 新增临时变量，记录 当前 留言开关的初始化的值
+// 注意 该值的处理 1.初始化 和重新初始化，重新赋值 2.转人工排队的时候设置关闭config的值 3.转人工成功再重新赋值给 config初始化的值
+@property(nonatomic,assign) NSUInteger tempMsgFlag;
+
 
 // 记录临时加载失败的图片地址
 @property(nonatomic,strong)NSMutableArray *tempImageArray;
@@ -202,7 +211,7 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 @property(nonatomic,copy) BOOL (^ _Nullable LinkClickBlock)(ZCLinkClickType type,NSString * _Nullable linkUrl,id _Nullable object);
 
 
--(void)doInitSDK:(id<ZCUICoreDelegate>_Nullable) delegate block:(void(^_Nullable)(ZCInitStatus status,NSString * _Nullable message,ZCLibConfig *_Nullable confg)) resultBlock;
+-(void)doInitSDK:(id<ZCUICoreDelegate>_Nullable) delegate block:(void(^_Nullable)(ZCInitStatus status,NSString * _Nullable message,id _Nullable initobj,ZCLibConfig *_Nullable confg)) resultBlock;
 
 -(void)keyboardOnClick:(ZCShowStatus)status;
 
