@@ -7,7 +7,6 @@
 "上传视频长度不能超过15s" = "Yüklenecek videoler 15 saniyeden uzun olmamalı";
 "视频" = "Video";
 "图片" = "Resim";
-"松开 发送" = "Bırakıp gönder";
 "暂时无法转接人工客服" = "Üzgünüz, acenteler şu anda meşgul";
 "暂时无法评价" = "Geçici olarak değerlendirme yapılamaz";
 "网络错误，请检查网络后重试" = "Internet hatası,lütfen interneti kontrol edip yeniden deneyin";
@@ -27,7 +26,7 @@
 "建议为必填" = "Öneri isteğe bağlı";
 "服务评价" = "Değerlendirme";
 "留言" = "Mesaj bırakmak";
-"您好，客服" = "Merhaba, ";
+"您好，客服" = "Merhaba,";
 "接受了您的请求" = "talebinizi kabul etti";
 "服务器请求错误！" = "Sunucu talebi yanlış!";
 "发给客服" = "Gönder";
@@ -44,11 +43,10 @@
 "重新发送" = "Yeniden gönder";
 "必填" = "Gerekli";
 "回复" = "Cevapla";
-"松开手指，取消发送" = "Parmak bırakıp göndermeyi iptal et";
 "您收到了一条新消息" = "Yeni bir mesaj aldın";
 "评分" = "Değerlendirme puanı";
 "评语" = "Yorum";
-"是否解决了您的问题？" = "probleminizi çözdü mü?";
+"是否解决了您的问题？" = "sorununuzu çözdü mü?";
 "%@ 是否解决了您的问题？" = "%@ sorununuzu çözdü mü?";
 "受理中" = "Kabul edildi";
 "问题分类" = "Problem türü";
@@ -61,7 +59,6 @@
 "请您留言" = "Mesaj bırak";
 "回复内容不能为空" = "Cevap içerikleri boş olmamalı";
 "请输入您的回复内容" = "Lütfen cevaplamak istediklerinizi yazın";
-"请输入" = "Lütfen yazın";
 "邀请您对本次服务进行评价" = "seni bu seferki hizmeti değerlendirmeye davet etti";
 "请您对本次服务进行评价" = "Lütfen bu seferki hizmeti değerlendirin";
 "图片格式错误" = "Resim formatı yanlış";
@@ -79,7 +76,6 @@
 "待付款" = "Ödenecek";
 "选填" = "İsteğe bağlı";
 "展开" = "Aç";
-"收起" = "Daralt";
 "无" = "Yok";
 "找不到图片" = "Resim bulunmadı";
 "以下为未读消息" = "Aşağıdakiler okunmamış mesajlar";
@@ -92,7 +88,6 @@
 "网络错误" = "Ağ hatası";
 "我的服务评价" = "Hizmetimin değerlendirmesi";
 "我的回复" = "Cevaplarım";
-"手指上滑，取消发送" = "Yukarı kaydırarak göndermeyi iptal et";
 "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！" = "Uyarı:İşlemleri gerçekleştirmek için normal web sitesinde yapın,doğrulama kodları,hesap numaraları gibi özel bilgileri kolayca vermeyin ve aldatılmaya dikkat edin!";
 "元" = "RMB";
 "留言记录" = "Mesaj kaydı";
@@ -108,7 +103,7 @@
 "下一页" = "Sonraki";
 "排队中..." = "Sırada...";
 "客户服务中心" = "Müşteri hizmet merkezi";
-"在线客服" = "Canlı Sohbet";
+"在线客服" = "Çevrimiçi hizmet";
 "可点击下方按钮咨询人工客服" = "Aşağıdaki düğmeye tıklayarak ajana danışın";
 "暂无帮助内容" = "Henüz yardım içerikleri yok";
 "非常满意" = "Sangat puas";
@@ -138,7 +133,7 @@
 "删除" = "Sil";
 "数据错误" = "Veriler yanlış";
 "客服" = "Müşteri hizmeti";
-"复制成功" = "Başarıyla kopyalandı";
+"复制成功！" = "Başarıyla kopyalandı!";
 "复制" = "Kopyala";
 "已创建" = "Kuruldu";
 "倒计时" = "Geri sayım";
@@ -166,9 +161,11 @@
 "确定" = "Tamamla";
 "取消" = "Iptal";
 "拍摄" = "Fotoğraf çek";
-"已保存到系统相册" = "Sistem albümüne kaydedildi";
 "咨询后才能评价服务质量" = "Danışmadan sonra hizmet kalitesi değerlendirilebilir";
 "不能为空" = "Boş olmamalı";
+"重新加载" = "Yeniden yükle";
+"去设置" = "Ayarlara git";
+"保存失败" = "Depolama başarısız";
 "编号" = "Seri numarası";
 "播放失败" = "Oynatma başarısız";
 "创建成功" = "Başarıyla kuruldu";
@@ -186,7 +183,7 @@
 "请在《设置 - 隐私 - 麦克风》选项中，允许访问您的麦克风" = "Lütfen \"Ayarlar-gizlilik-mikrofon\" Seçeneğinden mikrofonunuza erişime izin verin";
 "请在《设置 - 隐私 - 相机》选项中，允许访问您的相机" = "Lütfen \"Ayarlar-gizlilik-kamera\" Seçeneğinden kameranıza erişime izin verin";
 "请在iPhone的《设置-隐私-照片》选项中，允许访问你的手机相册" = "Lütfen iPhone ayarlarındaki fotoğraf albümünüze özel resmi seçeneklerinde erişime izin verin";
-"上传中" = "Yükleniyor...";
+"上传中..." = "Yükleniyor...";
 "商品" = "Ürün";
 "视频处理中，请稍候!" = "Video işleniyor,lütfen bekleyin!";
 "视频文件损坏，无法播放" = "Dosya bozuldu,oynatılamıyor";
@@ -208,116 +205,134 @@
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Kişisel duygusal bilgi göndermeye kabul ettiniz. Bu yetkili 24 saat boyunca geçerli.";
 "您已拒绝发送此消息" = "Bu mesajı göndermeyi reddettiniz";
 "附件" = "Kaplama";
-"保存成功" = "Başarıyla kaydedildi";
-"保存失败" = "Depolama başarısız";
+"填写信息" = "Bilgi doldur";
+"排队自动断开结束会话" = "Otomatik bağlantısını kapattıktan sonra oturum bitir";
+"小程序" = "Aplet";
+"小程序只能通过微信打开" = "Applet can only be opened through wechat";
+"解析中..." = "ParsingAnalisi";
+"继续排队" = "Devam et.";
+"如果继续等待，点击" = "Beklemeye devam ederseniz, tıklayın";
 "有用" = "Faydalı";
 "没用" = "Faydasız";
-//************* 同步415的数据  ***********
+"会话已结束，可重新发起咨询" = "Oturum bitti, danışma tekrar başlatılabilir.";
+"在线客服正在为您服务" = "İnternet müşteri hizmeti size hizmet ediyor.";
+"提交并咨询" = "Gönderin ve danışın";
+"换一批" = "Daha fazla";
+"转换失败" = "Görüntüleri değiştir";
+"转换完成" = "Ağı dönüştür";
+"订单号" = "Sipariş numarası";
+"交易状态" = "Ticaret durumu";
+"创建时间" = "Oluşturma zamanı";
+"展开更多" = "Daha fazla genişletin";
+"共" = "Toplam";
+"您未提交信息，请" = "Hiçbir bilgi göndermediniz. Lütfen";
+"重新填写信息" = "Bilgileri tekrar doldur";
+"请选择是否解决了您的问题" = "Lütfen sorununuz çözüldüğünü seçin.";
+"标签" = "Etiket";
+"是否解决" = "Çözümlenmiş";
+"引用" = "Alıntı";
+"我" = "Ben";
+"机器人" = "Robot";
+"文章" = "Article";
+"链接" = "Link";
+"您好，客服 #客服昵称# 为您提供服务" = "Merhaba, müşteri hizmetleri #Müşteri takma adı# size hizmet etmek için burada.";
+"对不起，未能解决您的问题，正在为您转接人工客服" = "Üzgünüz sorununuzu çözemedik. Sizi insan müşteri hizmetlerine aktarıyoruz.";
+"已选" = "Seçili";
+"无结果" = "Sonuç yok";
+"搜索" = "Arama";
+"搜索全部省" = "Bütün eyaletleri arayın";
+"搜索全部市" = "Bütün şehirleri arayın";
+"搜索全部县（区）" = "Bütün eyaletleri araştır (bölgeler)";
+"搜索全部街道" = "Bütün sokakları arayın";
+"保存成功" = "Başarıyla kaydedildi";
+"选择时区" = "Zaman bölgesini seç";
+"请选择时区" = "Lütfen zaman alanını seç";
+"暂无选项内容" = "Şu anda hiçbir seçenek mevcut değil";
+"时区" = "Zaman bölgesi";
+"年" = "Yıl";
+"月" = "Ay";
+"日" = "Gün";
+"区号" = "Bölge kodu";
 "填写信息" = "Bilgi doldur";
 "排队自动断开结束会话" = "Otomatik bağlantısını kapattıktan sonra oturum bitir";
 "小程序" = "Applet";
 "小程序只能通过微信打开" = "Applet can only be opened through wechat";
 "解析中..." = "ParsingAnalisi";
+"换一批" = "Daha fazla";
 "转换失败" = "Görüntüleri değiştir";
 "转换完成" = "Ağı dönüştür";
 "订单号" = "Sipariş numarası";
-"交易状态"="Ticaret durumu";
-"创建时间"="Oluşturma zamanı";
+"交易状态" = "Ticaret durumu";
+"创建时间" = "Oluşturma zamanı";
 "展开更多" = "Daha fazla genişletin";
 "共" = "Toplam";
-"已读"="Okundu";
-"未读"="Okunmadı";
-"我"="Ben";
-"机器人"="Bot";
+"我" = "Ben";
+"机器人" = "Bot";
 "链接" = "Link";
 "文章" = "Article";
 "引用" = "Alıntı";
-"已选"="Seçili";
-"搜索"="Arama";
-"搜索全部省"="Bütün eyaletleri arayın";
-"搜索全部市"="Bütün şehirleri arayın";
-"搜索全部县（区）"="Bütün eyaletleri araştır (bölgeler)";
-"搜索全部街道"="Bütün sokakları arayın";
-"无结果"="Sonuç yok";
+"已选" = "Seçili";
+"搜索" = "Arama";
+"搜索全部省" = "Bütün eyaletleri arayın";
+"搜索全部市" = "Bütün şehirleri arayın";
+"搜索全部县（区）" = "Bütün eyaletleri araştır (bölgeler)";
+"搜索全部街道" = "Bütün sokakları arayın";
+"无结果" = "Sonuç yok";
 "请选择是否解决了您的问题" = "Lütfen sorununuz çözüldüğünü seçin.";
-"换一批" = "Daha fazla";
-//************* 同步415的数据 end ***********
-
-
-/**公共组件翻译*/
-"选择时区" = "Zaman bölgesini seç";
-"请选择时区" = "Lütfen zaman alanını seç";
-"暂无选项内容" = "Şu anda hiçbir seçenek mevcut değil";
-"时区"="Zaman bölgesi";
-"年"="Yıl";
-"月"="Ay";
-"日"="Gün";
-
-
-"区号"="Bölge kodu";
-
-"语言已切换为“xxx”" = "Dil \"xxx\" olarak değiştirildi";
-"选择语言" = "Dil seçin";
+"转换中" = "Dönüştürme";
+"请填写手机号码" = "Lütfen cep telefonu numaranızı girin";
 "请选择您要使用的聊天语言：" = "Lütfen sohbet etmek istediğiniz dili seçin:";
 "更多语言" = "Daha fazla dil";
-
-"顶" = "top";
-"踩" = "Step on";
-
+"选择语言" = "Dil seçin";
+"语言已切换为“xxx”" = "Dil “xxx”olarak değiştirildi";
+"请选择区号" = "Lütfen alan kodunu seçin";
 "满意" = "Puas";
 "不满意" = "Tak puas";
-
+"请填写询前表单" = "Lütfen danışma formunu doldur";
 "回复了您" = "Size yanıt verildi";
 "您的回复" = "Cevabın";
-
 "上传附件" = "Ekleri Yükle";
 "展开全部" = "Tümünü genişlet";
 "收起" = "Katla";
-"松开 发送" = "Göndermek için serbest bırak";
-"松开 取消" = "İptal etmek için serbest bırak";
-"松开发送，上滑取消" = "Göndermek için serbest bırak, iptal etmek için yukarı kaydır";
 "暂无回复" = "Cevap yok";
-"请输入" = "Lütfen girin";
 "请输入..." = "Lütfen girin...";
-"请选择..." = "Lütfen seçin...";
 "最多上传" = "'i geçmiyor";
 "个，" = ", boyut";
 "大小不超过" = "'e kadar yükleyin";
 "已达上限 15 个" = "15 sınırına ulaşıldı";
-"知道了" = "Not edildi";
-"已拒绝" = "Reddedildi";
-
-
-"请选择" = "Lütfen seçin";
+"全部" = "Tüm";
+"请选择..." = "Lütfen seçin...";
 "暂无客服在线，点击进行留言。" = "Çevrimiçi acente yok. Gönderimi bırakmak için tıklayın";
 "工单处理状态更新后将在会话中提醒您" = "Bilet işleme durumu güncellendikten sonra sohbette bilgilendirileceksiniz";
-
+"松开 取消" = "İptal etmek için serbest bırak";
+"松开发送，上滑取消" = "Göndermek için serbest bırak, iptal etmek için yukarı kaydır";
+"松开 发送" = "Göndermek için serbest bırak";
 "商品数" = "Miktar";
 "更多信息" = "Daha fazla bilgi";
 "查看更多" = "Daha fazla gör";
-
-"全部" = "Tüm";
-
 "加载超时" = "Yükleme Zaman Sonu";
 "页面加载超时，请重新加载" = "Sayfa yükleme zamanı sona erdi, lütfen yeniden yükleyin";
-
-
 "您的工单已完成" = "Biletiniz tamamlandı";
 "回复…" = "Yanıtla…";
 "人工客服" = "Ajan";
-
-"是否解决：" = "Çözümlenmiş: ";
-"标签：" = "Etiket: ";
-
-"您的访问信息验证不通过，暂时不能接入客服" = "Giriş bilgileriniz doğrulanamadı, şu anda müşteri hizmetlerine bağlanamıyorsunuz.";
 "访问信息验证不通过" = "Erişim bilgisi doğrulanamadı.";
+"您的访问信息验证不通过，暂时不能接入客服" = "Giriş bilgileriniz doğrulanamadı, şu anda müşteri hizmetlerine bağlanamıyorsunuz.";
 "内容由 AI 生成" = "İçerik AI tarafından oluşturulmuştur";
-
+"更多" = "Daha fazla";
 "麦克风权限未开启" = "Mikrofona erişilemiyor";
-"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Ses kaydı yapmak için, cihazınızın “Ayarlar” > “Uygulamalar” > “%@” > “İzinler” bölümünden mikrofon iznini açın.";
-"继续拍摄"= "Kayda devam et";
-"去设置"= "Ayarlar’a git";
+"无法录制声音，前往“设置 > 应用 > %@>权限”中打开麦克风权限" = "Ses kaydı yapmak için, cihazınızın “Ayarlar” > “Uygulamalar” > “%@” > “İzinler” bölümünden mikrofon iznini açın.";
+"继续拍摄" = "Kayda devam et";
 "未开启麦克风，无法录制声音" = "Mikrofon etkin değil. Ses kaydedilemiyor.";
-
+"正在申请麦克风使用权限。允许后，咨询客服和留言时可以发送/上传录制的视频。" = "Mikrofon kullanım izni talep ediliyor. İzin verildikten sonra, müşteri hizmetlerine başvururken ve mesaj bırakırken kaydedilen videoyu gönderebilir/yükleyebilirsiniz.";
 "同意" = "Kabul Et";
 "我已阅读并同意%@。" = "%@'ı okudum ve kabul ediyorum.";
+"是否解决：" = "Çözüldü mü:";
+"标签：" = "Etiket:";
+"点击继续排队" = "Sıraya devam et";
+"如需继续等待 点击继续排队" = "Devam etmek için beklemeye devam etmek üzere \"Sıraya devam et\"e tıklayın.";
+"知道了" = "OK";
+
+"参考 %d 篇资料"="%d kaynak inceleyin";
+"参考资料"="Referans materyalleri";
+"开始咨询" = "Danışmaya başla";
+"开始咨询" = "Bilgileri doldurun";

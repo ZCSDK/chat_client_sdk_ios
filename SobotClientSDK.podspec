@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SobotClientSDK"
-  s.version      = "4.4.1"
+  s.version      = "4.5.0"
   s.summary      = "iOS SobotClientSDK v7"
   s.description      = <<-DESC
  Sobot SDKv7 Visitor Side provides enterprises with a complete set of intelligent customer service solutions. Sobot Customer Service SDK includes both customer service business logic and interactive interfaces. Enterprises can integrate Sobot Customer Service into their App with just two simple steps, enabling the App to have 7*24 hour customer service capabilities. 
@@ -32,7 +32,7 @@ DESC
   s.source       = { :git => "https://github.com/ZCSDK/chat_client_sdk_ios.git", :tag => s.version }
 
   s.resources = 'SobotKit.bundle'
-  s.ios.vendored_frameworks = 'SobotKit.framework','SobotChatClient.framework','SobotCommon.framework'
+  s.ios.vendored_frameworks = 'SobotKit.xcframework','SobotChatClient.xcframework','SobotCommon.xcframework'
 
 
 # 封装的framework名称

@@ -7,7 +7,6 @@
 "上传视频长度不能超过15s" = "Độ dài video tải lên không được vượt quá 15s";
 "视频" = "Video";
 "图片" = "Hình ảnh";
-"松开 发送" = "Thả lỏng gửi đi";
 "暂时无法转接人工客服" = "Xin lỗi, các đại lý đang bận vào lúc này";
 "暂时无法评价" = "Tạm thời không thể bình luận";
 "网络错误，请检查网络后重试" = "Mạng lỗi, hãy kiểm tra lại mạng rồi thử lại";
@@ -27,7 +26,7 @@
 "建议为必填" = "Kiến nghị bắt buộc điền";
 "服务评价" = "Đánh giá";
 "留言" = "Để lại tin nhắn";
-"您好，客服" = "Xin chào, ";
+"您好，客服" = "Xin chào,";
 "接受了您的请求" = "Đã chấp nhận yêu cầu của bạn";
 "服务器请求错误！" = "Yêu cầu máy chủ lỗi !";
 "发给客服" = "Gửi";
@@ -44,11 +43,10 @@
 "重新发送" = "Gửi lại";
 "必填" = "Bắt buộc điền";
 "回复" = "Trả lời";
-"松开手指，取消发送" = "Thả lỏng tay hủy gửi đi";
 "您收到了一条新消息" = "Bạn đã nhận được 1 tin nhắn";
 "评分" = "Điểm số";
 "评语" = "Lời đánh giá";
-"是否解决了您的问题？" = "có giải quyết được vấn đề của bạn không?";
+"是否解决了您的问题？" = "đã giải quyết vấn đề của bạn chưa?";
 "%@ 是否解决了您的问题？" = "%@ đã giải quyết vấn đề của bạn chưa?";
 "受理中" = "Đang xử lý";
 "问题分类" = "Loại câu hỏi";
@@ -61,7 +59,6 @@
 "请您留言" = "Để lại tin nhắn";
 "回复内容不能为空" = "Nội dung trả lời không được để trống";
 "请输入您的回复内容" = "Hãy nhập nội dung trả lời của bạn";
-"请输入" = "Hãy nhập";
 "邀请您对本次服务进行评价" = "Mời bạn cho ý kiến ​​về dịch vụ này";
 "请您对本次服务进行评价" = "Bạn vui lòng đánh giá về lần phục vụ này";
 "图片格式错误" = "Lỗi định dạng hình ảnh";
@@ -79,7 +76,6 @@
 "待付款" = "Đợi thanh toán";
 "选填" = "Tùy chọn";
 "展开" = "Mở ra";
-"收起" = "Thu gọn";
 "无" = "Không";
 "找不到图片" = "Không tìm thấy hình ảnh";
 "以下为未读消息" = "Dưới đây là tin nhắn chưa đọc";
@@ -92,7 +88,6 @@
 "网络错误" = "Lỗi mạng";
 "我的服务评价" = "Đánh giá dịch vụ của tôi";
 "我的回复" = "Trả lời của tôi";
-"手指上滑，取消发送" = "Tay vuốt lên, hủy gửi đi";
 "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！" = "Nhắc nhở : Hãy tiến hành giao dịch theo web chính thống và vận hành bình thường, không được cung cấp dễ dàng thông tin cá nhân như mã xác minh, tài khoản, tránh bị lừa đảo!";
 "元" = "Nhân dân tệ";
 "留言记录" = "Nhật ký lời nhắn";
@@ -108,7 +103,7 @@
 "下一页" = "Tiếp theo";
 "排队中..." = "Đang xếp hàng";
 "客户服务中心" = "Trung tâm dịch vụ chăm sóc khách hàng";
-"在线客服" = "Trò chuyện trực tiếp";
+"在线客服" = "Dịch vụ trực tuyến";
 "可点击下方按钮咨询人工客服" = "Nhấn nút bên dưới để tư vấn với đại lý";
 "暂无帮助内容" = "Tạm không có nội dung trợ giúp";
 "非常满意" = "Rất hài lòng";
@@ -138,7 +133,7 @@
 "删除" = "Xóa";
 "数据错误" = "Dữ liệu lỗi";
 "客服" = "Chăm sóc khách hàng";
-"复制成功" = "Sao chép thành công";
+"复制成功！" = "Sao chép thành công!";
 "复制" = "Sao chép";
 "已创建" = "Đã tạo";
 "倒计时" = "Đếm ngược";
@@ -166,9 +161,11 @@
 "确定" = "Xác định";
 "取消" = "Hủy bỏ";
 "拍摄" = "Chụp ảnh";
-"已保存到系统相册" = "Đã lưu vào album hệ thống";
 "咨询后才能评价服务质量" = "Sau khi tư vấn mới có thể đánh giá chất lượng dịch vụ";
 "不能为空" = "Không thể để trống";
+"重新加载" = "Tải lại";
+"去设置" = "Đi đến cài đặt";
+"保存失败" = "Lưu thất bại";
 "编号" = "Mã số";
 "播放失败" = "Phát sóng thất bại";
 "创建成功" = "Tạo thành công";
@@ -186,7 +183,7 @@
 "请在《设置 - 隐私 - 麦克风》选项中，允许访问您的麦克风" = "Vui lòng cho phép truy cập vào micrô của bạn trong tùy chọn \"Cài đặt-Quyền riêng tư-Micrô\"";
 "请在《设置 - 隐私 - 相机》选项中，允许访问您的相机" = "Vui lòng cho phép truy cập vào máy ảnh của bạn trong tùy chọn \"Cài đặt-Quyền riêng tư-Máy ảnh\"";
 "请在iPhone的《设置-隐私-照片》选项中，允许访问你的手机相册" = "Vui lòng cho phép truy cập vào album ảnh của điện thoại trong thiết lập Iphone";
-"上传中" = "Đang tải lên...";
+"上传中..." = "Đang tải lên...";
 "商品" = "Hàng hóa";
 "视频处理中，请稍候!" = "Đang xử lý video, vui lòng đợi!";
 "视频文件损坏，无法播放" = "Video tệp hỏng, không thể phát";
@@ -208,116 +205,134 @@
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Bạn đã đồng ý gởi thông tin nhạy cảm cá nhân. Giấy phép này hợp lệ cả ngày.";
 "您已拒绝发送此消息" = "Bạn đã từ chối gửi tin nhắn này";
 "附件" = "Chung";
-"保存成功" = "đã lưu thành công";
-"保存失败" = "Lưu thất bại";
+"填写信息" = "Điền thông tin vào";
+"排队自动断开结束会话" = "Kết thúc phiên chạy sau khi xếp hàng tự động ngắt";
+"小程序" = "Name";
+"小程序只能通过微信打开" = "Táo chỉ có thể mở qua wechat";
+"解析中..." = "Đức";
+"继续排队" = "Tiếp tục xếp hàng";
+"如果继续等待，点击" = "Nếu bạn tiếp tục đợi, hãy nhắp vào";
 "有用" = "Có ích";
 "没用" = "Không có ích";
+"会话已结束，可重新发起咨询" = "Phiên đã kết thúc, tư vấn có thể được khởi động lại";
+"在线客服正在为您服务" = "Dịch vụ khách hàng trực tuyến đang phục vụ";
+"提交并咨询" = "Gởi và tham khảo";
+"换一批" = "Thêm";
+"转换失败" = "Chuyển đổi thất bại";
+"转换完成" = "Hoàn thành chuyển đổi";
+"订单号" = "Mã đơn hàng";
+"交易状态" = "Trạng thái giao dịch";
+"创建时间" = "Thời gian tạo";
+"展开更多" = "Mở rộng thêm";
+"共" = "Tổng cộng";
+"您未提交信息，请" = "Bạn chưa gửi thông tin, vui lòng";
+"重新填写信息" = "Điền lại thông tin";
+"请选择是否解决了您的问题" = "Vui lòng chọn nếu vấn đề của bạn được giải quyết";
+"标签" = "Thẻ";
+"是否解决" = "Giải quyết";
+"引用" = "Trích dẫn";
+"我" = "Tôi";
+"机器人" = "Người máy";
+"文章" = "Bài viết";
+"链接" = "Liên kết";
+"您好，客服 #客服昵称# 为您提供服务" = "Xin chào, bộ phận chăm sóc khách hàng #Biệt hiệu của khách hàng# sẵn sàng phục vụ bạn.";
+"对不起，未能解决您的问题，正在为您转接人工客服" = "Rất tiếc, chúng tôi không thể giải quyết vấn đề của bạn. Chúng tôi đang chuyển bạn sang bộ phận dịch vụ khách hàng của con người.";
+"已选" = "Đã chọn";
+"无结果" = "Không có kết quả";
+"搜索" = "Tìm kiếm";
+"搜索全部省" = "Tìm tất cả Province";
+"搜索全部市" = "Tìm tất cả thành phố";
+"搜索全部县（区）" = "Tìm kiếm tất cả các quận (quận)";
+"搜索全部街道" = "Tìm tất cả đường phố";
+"保存成功" = "đã lưu thành công";
+"选择时区" = "Chọn múi giờ";
+"请选择时区" = "Vui lòng chọn múi giờ";
+"暂无选项内容" = "Tạm thời không có nội dung tùy chọn";
+"时区" = "Múi giờ";
+"年" = "Năm";
+"月" = "Tháng";
+"日" = "Ngày";
+"区号" = "Mã vùng";
 "填写信息" = "Điền thông tin vào";
 "排队自动断开结束会话" = "Kết thúc phiên chạy sau khi xếp hàng tự động ngắt";
 "小程序" = "Tiểu dụng";
 "小程序只能通过微信打开" = "Táo chỉ có thể mở qua wechat";
 "解析中..." = "Đức";
+"换一批" = "Thêm";
 "转换失败" = "Chuyển đổi thất bại";
 "转换完成" = "Hoàn thành chuyển đổi";
 "订单号" = "Mã đơn hàng";
-"交易状态"="Trạng thái giao dịch";
-"创建时间"="Thời gian tạo";
+"交易状态" = "Trạng thái giao dịch";
+"创建时间" = "Thời gian tạo";
 "展开更多" = "Mở rộng thêm";
 "共" = "Tổng cộng";
-"已读"="Đã đọc";
-"未读"="Chưa đọc";
-"我"="Tôi";
-"机器人"="Bot";
+"我" = "Tôi";
+"机器人" = "Bot";
 "链接" = "Liên kết";
 "文章" = "Bài viết";
 "引用" = "Trích dẫn";
-"已选"="Đã chọn";
-"搜索"="Tìm kiếm";
-"搜索全部省"="Tìm tất cả Province";
-"搜索全部市"="Tìm tất cả thành phố";
-"搜索全部县（区）"="Tìm kiếm tất cả các quận (quận)";
-"搜索全部街道"="Tìm tất cả đường phố";
-"无结果"="Không có kết quả";
+"已选" = "Đã chọn";
+"搜索" = "Tìm kiếm";
+"搜索全部省" = "Tìm tất cả Province";
+"搜索全部市" = "Tìm tất cả thành phố";
+"搜索全部县（区）" = "Tìm kiếm tất cả các quận (quận)";
+"搜索全部街道" = "Tìm tất cả đường phố";
+"无结果" = "Không có kết quả";
 "请选择是否解决了您的问题" = "Vui lòng chọn nếu vấn đề của bạn được giải quyết";
-"换一批" = "Thêm";
-
-//
-/**公共组件翻译*/
-"选择时区" = "Chọn múi giờ";
-"请选择时区" = "Vui lòng chọn múi giờ";
-"暂无选项内容" = "Tạm thời không có nội dung tùy chọn";
-"时区"="Múi giờ";
-"年"="Năm";
-"月"="Tháng";
-"日"="Ngày";
-
-"区号"="Mã vùng";
-
-
-"语言已切换为“xxx”" = "Ngôn ngữ đã được chuyển sang \"xxx\"";
-"选择语言" = "Chọn ngôn ngữ";
+"转换中" = "Chuyển đổi";
+"请填写手机号码" = "Vui lòng điền số điện thoại di động của bạn";
 "请选择您要使用的聊天语言：" = "Vui lòng chọn ngôn ngữ bạn muốn trò chuyện:";
 "更多语言" = "Thêm ngôn ngữ";
-
-
-
-"顶" = "trên";
-"踩" = "bước lên";
-
+"选择语言" = "Chọn ngôn ngữ";
+"语言已切换为“xxx”" = "Ngôn ngữ đã được chuyển sang “xxx”";
+"请选择区号" = "Vui lòng chọn mã vùng";
 "满意" = "Hài lòng";
 "不满意" = "Không hài lòng";
-
+"请填写询前表单" = "Hãy viết biểu mẫu trước khi truy vấn";
 "回复了您" = "Đã trả lời bạn";
 "您的回复" = "Câu trả lời của bạn";
-
 "上传附件" = "Tải lên tệp đính kèm";
 "展开全部" = "Mở rộng tất cả";
 "收起" = "Gấp lại";
-"松开 发送" = "Thả để gửi";
-"松开 取消" = "Thả để hủy";
-"松开发送，上滑取消" = "Thả để gửi, vuốt lên để hủy";
 "暂无回复" = "Không trả lời";
-"请输入" = "Vui lòng nhập";
+"请输入..." = "Vui lòng nhập...";
 "最多上传" = "Tải lên tối đa";
 "个，" = ",";
 "大小不超过" = "kích thước không vượt quá";
 "已达上限 15 个" = "Đã đạt giới hạn 15";
-"知道了" = "Đã ghi nhận";
-"已拒绝" = "Đã từ chối";
-
-
-"请选择" = "Vui lòng chọn";
+"全部" = "Tất cả";
+"请选择..." = "Vui lòng chọn...";
 "暂无客服在线，点击进行留言。" = "Không có đại lý trực tuyến. Nhấp để gửi";
 "工单处理状态更新后将在会话中提醒您" = "Bạn sẽ được thông báo trong cuộc trò chuyện sau khi trạng thái xử lý vé được cập nhật";
-
+"松开 取消" = "Thả để hủy";
+"松开发送，上滑取消" = "Thả để gửi, vuốt lên để hủy";
+"松开 发送" = "Thả để gửi";
 "商品数" = "Số lượng";
 "更多信息" = "Thông tin thêm";
 "查看更多" = "Xem thêm";
-
-"全部" = "Tất cả";
-
 "加载超时" = "Thời gian chờ tải";
 "页面加载超时，请重新加载" = "Thời gian chờ tải trang, vui lòng tải lại";
-
-
 "您的工单已完成" = "Vé của bạn đã hoàn thành";
 "回复…" = "Trả lời…";
 "人工客服" = "Đại lý";
-"请选择..." = "Vui lòng chọn...";
-"请输入..." = "Vui lòng nhập...";
-
-"是否解决：" = "Giải quyết: ";
-"标签：" = "Thẻ: ";
-
-"您的访问信息验证不通过，暂时不能接入客服" = "Thông tin truy cập của bạn không được xác minh, tạm thời không thể kết nối với dịch vụ khách hàng.";
 "访问信息验证不通过" = "Xác minh thông tin truy cập không thành công";
+"您的访问信息验证不通过，暂时不能接入客服" = "Thông tin truy cập của bạn không được xác minh, tạm thời không thể kết nối với dịch vụ khách hàng.";
 "内容由 AI 生成" = "Nội dung được tạo bởi AI";
-
+"更多" = "Thêm nhiều";
 "麦克风权限未开启" = "Không thể truy cập micro";
-"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Để ghi âm, hãy cho phép quyền micro trong “Cài đặt” > “Ứng dụng” > “%@” > “Quyền”.";
-"继续拍摄"= "Tiếp tục ghi âm";
-"去设置"= "Đi đến Cài đặt";
+"无法录制声音，前往“设置 > 应用 > %@>权限”中打开麦克风权限" = "Để ghi âm, hãy cho phép quyền micro trong “Cài đặt” > “Ứng dụng” > “%@” > “Quyền”.";
+"继续拍摄" = "Tiếp tục ghi âm";
 "未开启麦克风，无法录制声音" = "Micro chưa được bật. Không thể ghi âm.";
-
+"正在申请麦克风使用权限。允许后，咨询客服和留言时可以发送/上传录制的视频。" = "Đang yêu cầu quyền sử dụng microphone. Sau khi được phép, bạn có thể gửi/tải lên video đã ghi khi liên hệ với bộ phận hỗ trợ khách hàng và để lại tin nhắn.";
 "同意" = "Đồng ý";
 "我已阅读并同意%@。" = "Tôi đã đọc và đồng ý với %@.";
+"是否解决：" = "Đã giải quyết chưa:";
+"标签：" = "Nhãn:";
+"点击继续排队" = "hãy nhấp vào Tiếp tục xếp hàng";
+"如需继续等待 点击继续排队" = "Nếu bạn muốn tiếp tục chờ, hãy nhấp vào Tiếp tục xếp hàng.";
+"知道了" = "OK";
+
+"参考 %d 篇资料"="Tham khảo %d tài liệu";
+"参考资料"="Tài liệu tham khảo";
+"开始咨询" = "Bắt đầu tư vấn";
+"开始咨询" = "Điền thông tin";

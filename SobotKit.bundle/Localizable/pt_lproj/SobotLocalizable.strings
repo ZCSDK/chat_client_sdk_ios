@@ -7,7 +7,6 @@
 "上传视频长度不能超过15s" = "A duração do vídeo carregado não pode exceder 15s";
 "视频" = "Vídeo";
 "图片" = "Fotografias";
-"松开 发送" = "Solte para enviar";
 "暂时无法转接人工客服" = "Desculpe, os agentes estão ocupados no momento";
 "暂时无法评价" = "Não é possível avaliar o serviço neste momento";
 "网络错误，请检查网络后重试" = "Ocorreu um erro de rede, por favor, verifique a rede e tente novamente";
@@ -27,7 +26,7 @@
 "建议为必填" = "O preenchimento do campo de sugestão éobrigatório";
 "服务评价" = "Avaliação";
 "留言" = "Deixar mensagem";
-"您好，客服" = "Olá, ";
+"您好，客服" = "Olá,";
 "接受了您的请求" = "aceitou o seu pedido.";
 "服务器请求错误！" = "Erro no pedido do servidor!";
 "发给客服" = "Enviar";
@@ -39,15 +38,15 @@
 "机器人咨询模式下，语音将自动转化为文字发送" = "No modo de consulta robótica, a voz é automaticamente convertida em texto a enviar";
 "机器人客服评价" = "Avaliação do Agente Bot";
 "对不起，未能解决您的问题，正在为您转接人工客服" = "Desculpe não ter resolvido o seu problema. Vou transferi-lo para um agente";
+"撤回了一条消息" = "uma Mensagem FOI retirada";
 "重建会话" = "Novo chat";
 "重新发送" = "Reenviar";
 "必填" = "Campos obrigatórios";
 "回复" = "Resposta";
-"松开手指，取消发送" = "Solte o dedo para cancelar";
 "您收到了一条新消息" = "Você recebeu uma nova mensagem";
 "评分" = "Pontos de avaliação";
 "评语" = "Comentários";
-"是否解决了您的问题？" = "resolveu o seu problema?";
+"是否解决了您的问题？" = "resolveu o seu problema?";
 "%@ 是否解决了您的问题？" = "%@ resolveu o seu problema?";
 "受理中" = "Em processamento";
 "问题分类" = "Classificação do problema";
@@ -60,7 +59,6 @@
 "请您留言" = "Deixar mensagem";
 "回复内容不能为空" = "O conteúdo da resposta não pode estar vazio";
 "请输入您的回复内容" = "Por favor, introduza a sua resposta";
-"请输入" = "Por favor, introduza";
 "邀请您对本次服务进行评价" = "convida-o a avaliar este serviço";
 "请您对本次服务进行评价" = "Por favor, avalie este serviço~";
 "图片格式错误" = "O formato da imagem está errado";
@@ -76,9 +74,8 @@
 "运输中" = "Em trânsito";
 "待发货" = "À espera de expedição";
 "待付款" = "Pagamento pendente";
-"选填" = "Nenhum";
+"选填" = "Opcional";
 "展开" = "Expandir";
-"收起" = "Colapsar";
 "无" = "Nenhum";
 "找不到图片" = "Não foi possível encontrar a imagem.";
 "以下为未读消息" = "Seguem abaixo as mensagens não lidas";
@@ -91,7 +88,6 @@
 "网络错误" = "Ocorreu um erro de rede";
 "我的服务评价" = "A minha avaliação de serviços";
 "我的回复" = "A minha resposta";
-"手指上滑，取消发送" = "Deslize o seu dedo para cima para cancelar o envio.";
 "温馨提示：从正规网站按照正常操作进行交易，不要轻易提供验证码、账号等隐私信息，谨防被骗！" = "Aviso: siga o funcionamento normal a partir do website oficial para realizar transações. Não forneça facilmente o código de verificação, o número de conta e outras informações privadas, e tenha cuidado para não ser enganado!";
 "元" = "Yuan";
 "留言记录" = "Histórico das mensagens";
@@ -107,7 +103,7 @@
 "下一页" = "Seguinte";
 "排队中..." = "Você está na linha de espera...";
 "客户服务中心" = "Centro de serviço ao cliente";
-"在线客服" = "Chat ao vivo";
+"在线客服" = "Serviço online";
 "可点击下方按钮咨询人工客服" = "Clique no botão abaixo para consultar o agente";
 "暂无帮助内容" = "Sem conteúdo de ajuda do momento";
 "非常满意" = "Muito satisfeito";
@@ -137,7 +133,7 @@
 "删除" = "Excluir";
 "数据错误" = "Dados errados";
 "客服" = "Agente";
-"复制成功" = "Copie isso com sucesso";
+"复制成功！" = "Copie isso com sucesso!";
 "复制" = "Copiar";
 "已创建" = "Criado";
 "倒计时" = "Contagem decrescente";
@@ -165,9 +161,11 @@
 "确定" = "Confirmar";
 "取消" = "Cancelar";
 "拍摄" = "Câmara";
-"已保存到系统相册" = "Já foi salvo no álbum de fotografias do sistema";
 "咨询后才能评价服务质量" = "A qualidade do serviço só pode ser avaliada após a consulta";
 "不能为空" = "Não pode estar vazio";
+"重新加载" = "Recarregar";
+"去设置" = "Ir configurar";
+"保存失败" = "Falha ao salvar,";
 "编号" = "Número";
 "播放失败" = "Reprodução falhada";
 "创建成功" = "Criado com sucesso";
@@ -185,7 +183,7 @@
 "请在《设置 - 隐私 - 麦克风》选项中，允许访问您的麦克风" = "Por favor, permita o acesso ao seu microfone na opção \"Definições - Privacidade - Microfone\"";
 "请在《设置 - 隐私 - 相机》选项中，允许访问您的相机" = "Por favor, permita o acesso à sua câmara na opção \"Definições - Privacidade - Câmara\"";
 "请在iPhone的《设置-隐私-照片》选项中，允许访问你的手机相册" = "Por favor, permita o acesso Ao álbum de fotos do SEU telefone Na opção de fotos de privacidade configurações do iPhone";
-"上传中" = "No processo de ser carregado";
+"上传中..." = "Enviando...";
 "商品" = "Artigo";
 "视频处理中，请稍候!" = "O vídeo está em processamento, por favor, aguarde um momento!";
 "视频文件损坏，无法播放" = "O ficheiro de vídeo é avariado e não pode ser reproduzido";
@@ -207,121 +205,134 @@
 "您已同意发送个人敏感信息，本次授权有效期24小时" = "Você concordou em enviar informações pessoais sensíveis. Esta autorização é válida por 24 horas";
 "您已拒绝发送此消息" = "Você se recusou a enviar esta mensagem";
 "附件" = "Apêndice";
-"保存成功" = "Salvo com sucesso";
-"保存失败" = "Falha ao salvar";
+"填写信息" = "Preencher as informações";
+"排队自动断开结束会话" = "Terminar a sessão após a desconexão automática em fila";
+"小程序" = "Applet";
+"小程序只能通过微信打开" = "A \'Applet\' só pode ser aberta através do wechat";
+"解析中..." = "Analisar";
+"继续排队" = "Continue na fila";
+"如果继续等待，点击" = "Se continuar a esperar, clique";
 "有用" = "Útil";
 "没用" = "Inútil";
-"上传中..." = "Enviando...";
-//************* 同步415的数据 ***********
+"会话已结束，可重新发起咨询" = "A sessão terminou, a consulta pode ser iniciada novamente";
+"在线客服正在为您服务" = "O serviço ao cliente online está a servir-te.";
+"提交并咨询" = "Submeter e consultar";
+"换一批" = "Mais";
+"转换失败" = "Mudar as vistas";
+"转换完成" = "Converter rede";
+"订单号" = "Número do pedido";
+"交易状态" = "Status de negociação";
+"创建时间" = "Hora de criação";
+"展开更多" = "Expandir Mais";
+"共" = "Total";
+"您未提交信息，请" = "Você não enviou nenhuma informação. Por favor";
+"重新填写信息" = "Preencher a informação novamente";
+"请选择是否解决了您的问题" = "Por favor, escolha se o seu problema foi resolvido";
+"标签" = "Rótulo";
+"是否解决" = "Resolvido";
+"引用" = "Citação";
+"我" = "Eu";
+"机器人" = "Robô";
+"文章" = "Artigo";
+"链接" = "Link";
+"您好，客服 #客服昵称# 为您提供服务" = "Olá, o atendimento ao cliente #Apelido do cliente# está aqui para atendê-lo.";
+"对不起，未能解决您的问题，正在为您转接人工客服" = "Lamentamos, mas não conseguimos resolver o seu problema. Estamos transferindo você para o atendimento humano.";
+"已选" = "Seleccionado";
+"无结果" = "Sem resultado";
+"搜索" = "Pesquisa";
+"搜索全部省" = "Procurar todas as províncias";
+"搜索全部市" = "Procurar todas as cidades";
+"搜索全部县（区）" = "Procurar todos os condados (distritos)";
+"搜索全部街道" = "Procurem em todas as ruas";
+"保存成功" = "Salvo com sucesso";
+"选择时区" = "Seleccionar o fuso horário";
+"请选择时区" = "Por favor seleccione um fuso horário";
+"暂无选项内容" = "Atualmente não existem opções disponíveis";
+"时区" = "Fuso horário";
+"年" = "Ano";
+"月" = "Mês";
+"日" = "Dia";
+"区号" = "Código da área";
 "填写信息" = "Preencher as informações";
 "排队自动断开结束会话" = "Terminar a sessão após a desconexão automática em fila";
 "小程序" = "Applet";
 "小程序只能通过微信打开" = "A 'Applet' só pode ser aberta através do wechat";
 "解析中..." = "Analisar";
+"换一批" = "Mais";
 "转换失败" = "Mudar as vistas";
 "转换完成" = "Converter rede";
-"订单号" = "Número do pedido";
-"交易状态"="Status de negociação";
-"创建时间"="Hora de criação";
+"订单号" = "Número de encomenda";
+"交易状态" = "Status de negociação";
+"创建时间" = "Hora de criação";
 "展开更多" = "Expandir Mais";
 "共" = "Total";
-"已读"="Lido";
-"未读"="Não lido";
-"我"="Eu";
-"机器人"="Robô";
+"我" = "Eu";
+"机器人" = "Bot";
 "链接" = "Link";
 "文章" = "Artigo";
 "引用" = "Citação";
-"已选"="Selecionado";
-"搜索"="Pesquisa";
-"搜索全部省"="Procurar todas as províncias";
-"搜索全部市"="Procurar todas as cidades";
-"搜索全部县（区）"="Procurar todos os condados (distritos)";
-"搜索全部街道"="Procurem em todas as ruas";
-"无结果"="Nenhum resultado";
+"已选" = "Selecionado";
+"搜索" = "Pesquisa";
+"搜索全部省" = "Procurar todas as províncias";
+"搜索全部市" = "Procurar todas as cidades";
+"搜索全部县（区）" = "Procurar todos os condados (distritos)";
+"搜索全部街道" = "Procurem em todas as ruas";
+"无结果" = "Nenhum resultado";
 "请选择是否解决了您的问题" = "Por favor, escolha se o seu problema foi resolvido";
-"换一批" = "Mais";
-//************* 同步415的数据 end ***********
-"请输入..." = "Por favor inserir...";
-"请选择..." = "Por favor selecione...";
-
-/**公共组件翻译*/
-"选择时区" = "Seleccionar o fuso horário";
-"请选择时区" = "Por favor seleccione um fuso horário";
-"暂无选项内容" = "Atualmente não existem opções disponíveis";
-"时区"="Fuso horário";
-"年"="Ano";
-"月"="Mês";
-"日"="Dia";
-
-"区号"="Código da área";
-
-
-"语言已切换为“xxx”" = "O idioma foi alterado para \"xxx\"";
+"转换中" = "Convertendo";
+"请填写手机号码" = "Preencha seu número de telefone móvel";
+"请选择您要使用的聊天语言：" = "Selecione o idioma em que pretende conversar:";
+"更多语言" = "Mais idiomas";
 "选择语言" = "Selecione o idioma";
-"请选择您要使用的聊天语言：" = "Selecione o idioma em que deseja conversar:";
-"更多语言" = "Mais Línguas";
-
-"顶" = "topo";
-"踩" = "passo em frente";
-
+"语言已切换为“xxx”" = "O idioma foi alterado para “xxx”";
+"请选择区号" = "Selecione o indicativo";
 "满意" = "Satisfeito";
 "不满意" = "Insatisfeito";
-
+"请填写询前表单" = "Por favor, preencha o formulário de pré-consulta";
 "回复了您" = "Respondeu-lhe";
 "您的回复" = "A sua resposta";
-
-
 "上传附件" = "Enviar Anexo";
 "展开全部" = "Expandir Tudo";
 "收起" = "Recolher";
-"松开 发送" = "Solte para Enviar";
-"松开 取消" = "Solte para Cancelar";
-"松开发送，上滑取消" = "Solte para enviar e deslize para cima para cancelar";
 "暂无回复" = "Sem resposta";
-"请输入" = "Digite";
+"请输入..." = "Por favor inserir...";
 "最多上传" = "Carregue no máximo";
 "个，" = "";
 "大小不超过" = "que não exceda";
 "已达上限 15 个" = "Limite de 15 atingido";
-"知道了" = "OK";
-"已拒绝" = "Rechazado";
-
-
-"请选择" = "Por favor selecione";
+"全部" = "Tudo";
+"请选择..." = "Por favor selecione...";
 "暂无客服在线，点击进行留言。" = "Sem agente online. Clique para sair do envio";
 "工单处理状态更新后将在会话中提醒您" = "O estado de processamento de ticket será lembrado durante a sessão após a atualização";
-
+"松开 取消" = "Solte para Cancelar";
+"松开发送，上滑取消" = "Solte para enviar e deslize para cima para cancelar";
+"松开 发送" = "Solte para Enviar";
 "商品数" = "Quantidade";
 "更多信息" = "Mais informações";
 "查看更多" = "Ver mais";
-
-"全部" = "Tudo";
-
 "加载超时" = "Tempo de carregamento excedido";
 "页面加载超时，请重新加载" = "A página demorou muito para carregar, por favor, recarregue.";
-
-
 "您的工单已完成" = "O seu ticket foi concluído";
 "回复…" = "Responder...";
 "人工客服" = "Agente";
-
-"是否解决：" = "Resolvido: ";
-"标签：" = "Rótulo: ";
-
-"您的访问信息验证不通过，暂时不能接入客服" = "A verificação das suas informações de acesso falhou, e você não pode acessar o agente temporariamente.";
 "访问信息验证不通过" = "A verificação das informações de acesso não foi aprovada.";
+"您的访问信息验证不通过，暂时不能接入客服" = "A verificação das suas informações de acesso falhou, e você não pode acessar o agente temporariamente.";
 "内容由 AI 生成" = "Conteúdo gerado por IA";
-
+"更多" = "Mais";
 "麦克风权限未开启" = "Não consigo acessar o microfone";
-"无法录制声音，前往“设置 > 应用 > %@ >权限”中打开麦克风权限" = "Para gravar áudio, autorize as permissões de microfone no seu dispositivo em \"Configurações >Apps > %@ > Permissões\".";
-"继续拍摄"= "Continuar gravando";
-"去设置"= "Definin";
+"无法录制声音，前往“设置 > 应用 > %@>权限”中打开麦克风权限" = "Para gravar áudio, autorize as permissões de microfone no seu dispositivo em \"Configurações\" >\"Apps\" > \"%@\" > \"Permissões\".";
+"继续拍摄" = "Continuar gravando";
 "未开启麦克风，无法录制声音" = "Microfone não ativado. Não é possível gravar áudio.";
-
+"正在申请麦克风使用权限。允许后，咨询客服和留言时可以发送/上传录制的视频。" = "Solicitando permissão para usar o microfone. Após a aprovação, você poderá enviar/carregar vídeos gravados ao consultar o agente e deixar mensagens.";
 "同意" = "Concordar";
 "我已阅读并同意%@。" = "Eu li e concordo com os %@.";
+"是否解决：" = "Resolvido:";
+"标签：" = "Etiqueta:";
+"点击继续排队" = "clique para continuar na fila";
+"如需继续等待 点击继续排队" = "Se deseja continuar esperando, clique para continuar na fila.";
+"知道了" = "OK";
 
-
-
-
+"参考 %d 篇资料"="Consulte %d documento(s) de referência.";
+"参考资料"="Referências";
+"开始咨询" = "Iniciar consulta";
+"填写信息" = "Preencher informações";
