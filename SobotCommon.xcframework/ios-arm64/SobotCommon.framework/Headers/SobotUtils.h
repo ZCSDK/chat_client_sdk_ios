@@ -132,6 +132,12 @@ NSString* sobotGetTempFilePath(NSString* fileName);
 NSString* sobotGetFileNameByPath(NSString* path);
 
 
+// 获取bundle的完整路径pathForResource
+NSString* sobotGetResourcePath(NSString* basePath, NSString* resName, NSString* resType);
+// 获取bundle的完整路径URLForResource
+NSURL* sobotGetResourceUrl(NSString* basePath, NSString* resName, NSString* resType);
+
+
 // 路径是否存在，不区别文件或路径
 BOOL sobotCheckFileIsExsis(NSString *filePath);
 

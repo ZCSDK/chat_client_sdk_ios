@@ -32,10 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(assign,nonatomic) BOOL isUseImagesxcassets;
 
-// 自定义SPM包，设置SPM包名称
-@property(nonatomic,strong) NSString *spmModuleName;
-@property(nonatomic,strong) NSString *spmTargetName;
-
 /**
  同步的翻译内容，如果有，优先使用同步的翻译
  */
