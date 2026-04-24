@@ -180,9 +180,9 @@
 "请输入邮箱地址" = "Voer uw e-mailadres in";
 "请填写问题描述" = "Vul de probleemomschrijving in";
 "请填写询前表单" = "Vul het voorconsultatieformulier in";
-"请在《设置 - 隐私 - 麦克风》选项中，允许访问您的麦克风" = "Stel in dat toegang tot uw microfoon is toegestaan via de optie \"Instellingen - Privacy - Microfoon\"";
-"请在《设置 - 隐私 - 相机》选项中，允许访问您的相机" = "Stel in dat toegang tot uw camera is toegestaan via de optie \"Instellingen - Privacy - Camera\"";
-"请在iPhone的《设置-隐私-照片》选项中，允许访问你的手机相册" = "Stel in dat toegang tot uw fotoalbum op iPhone is toegestaan via de optie \"Instellingen - Privacy - Foto's\"";
+"请求访问麦克风权限。用于发送语音、视频消息，不允许访客权限时，仍可正常使用应用。" = "Microfoontoegang nodig voor spraak-/videoboodschappen. App blijft werken als toegang geweigerd wordt.";
+"请求访问相机权限。用于发送图片、录像消息。不允许访客权限时，仍可正常使用应用。" = "Cameratoegang nodig voor het verzenden van afbeeldingen/video’s. App blijft werken als toegang geweigerd wordt.";
+"请求访问照片权限。用于发送图片消息。不允许访客权限时，仍可正常使用应用" = "Fototoegang nodig voor het verzenden van afbeeldingen. App blijft werken als toegang geweigerd wordt.";
 "上传中..." = "Wordt geüpload...";
 "商品" = "Product";
 "视频处理中，请稍候!" = "Video wordt verwerkt, wacht even!";
@@ -336,3 +336,5 @@
 "参考资料"="Referentiebronnen";
 "开始咨询" = "Begin met raadplegen";
 "填写信息" = "Informatie invullen";
+"工单编号" = "Werkordernummer";
+"已复制工单编号" = "Werkordernummer gekopieerd";
