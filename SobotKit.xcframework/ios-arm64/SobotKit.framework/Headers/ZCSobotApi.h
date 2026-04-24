@@ -276,6 +276,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 在不进入SDK页面，获取离线消息数、未确认消息数 和本地记录未读消息数
 /// 如果调用该方法时，消息通道是建立的，还没有断开，还能搜到IM下推消息，SDK收到消息后会给服务端发送确认回执，
+///  *注意*当前请求小于300s(5分钟)，则不执行本次请求，防止请求过于频繁
 /// - Parameter partnerid: 对接ID
 /// - Parameter appkey: appkey
 /// - Parameter ResultBlock: 回调结果

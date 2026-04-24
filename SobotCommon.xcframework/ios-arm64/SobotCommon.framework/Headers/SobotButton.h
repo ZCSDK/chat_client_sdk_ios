@@ -15,6 +15,18 @@ NS_ASSUME_NONNULL_BEGIN
 // 如果需要自动折行，设置YES
 @property(nonatomic,assign) BOOL autoHeight;
 
+// 按下的alpha的值
+@property(nonatomic,assign) CGFloat pressAlpha;
+
+// 由于内部判断暗黑准确，需要外部指定
+@property(nonatomic,strong) UIColor *pressHoverColor;
+// 设置为YES的时候，添加按下和抬起事件
+@property(nonatomic,assign) BOOL openHoverStyle;
+// 切换圆角度数
+@property(nonatomic,assign) CGFloat  pressRadius;
+// 切换圆角的枚举值 需要设置为圆角的角 UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight | UIRectCornerAllCorners
+@property(nonatomic,assign) UIRectCorner pressHoverCorners;
+
 // 扩展参数
 @property(nonatomic,strong) id obj;
 
@@ -36,6 +48,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) UIColor *(^traitCollectionChangedBlock)(UITraitCollection *previousTraitCollection,UIView *sView); // 点击事件Block
 
 -(void) addTapHandle:(void(^)(SobotButton *btnObj)) clickBlock;
+
+
+
+-(void) onHoverTouchDown:(void(^)(UIView *hoverView)) touchDown;
+
+
+
+// 按钮按下和抬起事件
+- (void)buttonHoverTouchDown:(SobotButton *)button;
+- (void)buttonHoverTouchUp:(SobotButton *)button;
 
 
 @end

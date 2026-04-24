@@ -206,6 +206,9 @@
 
 // 关闭系统设置RTL功能
 @property (nonatomic,assign) BOOL isCloseSystemRTL;
+
+// 关闭SDK父类semanticContentAttribute设置
+@property (nonatomic,assign) BOOL isCloseBaseSemanticContentAttribute;
 ////////////////////////////////////////////////////////////////
 #pragma Mark -- 和UI相关的配置参数自定义可选项
 ////////////////////////////////////////////////////////////////

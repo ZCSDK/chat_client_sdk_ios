@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SobotCommon/SobotCommon.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

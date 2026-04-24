@@ -38,6 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) int isDefaultGuide;
 @property (nonatomic,strong) NSString *guideCopyWriting;//": "服务评价",
 
+
+// 0自定义，1默认
+@property (nonatomic,assign) int isDefaultQuestion;
+@property (nonatomic,strong) NSString *questionCopywriting;//": "是否解决的描述",
+
 @property (nonatomic,assign) int isDefault;//": 1
 // 1显示，0不显示
 @property (nonatomic,assign) int txtFlag;//": 1

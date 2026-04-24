@@ -979,6 +979,18 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
                  success:(void (^)(SobotChatMessage *message, ZCNetWorkCode code))successBlock
                 progress:(void (^)(SobotChatMessage *message))progressBlock
                    fail:(void (^)(SobotChatMessage *message,NSString *errorMsg, ZCNetWorkCode code))failBlock;
+
+/// 查询企业是否开启扩容
+/// @param productId   固定 1000054    工单内存容量产品
+/// @param companyId 企业ID
+/// @param startBlock startBlock description
+/// @param successBlock successBlock description
+/// @param failedBlock failedBlock description
++(void)getProductByCode:(NSString *)productId
+              companyId:(NSString *)companyId
+                  start:(void (^)(NSString *url))startBlock
+                success:(void(^)(NSDictionary *dict,ZCNetWorkCode sendCode)) successBlock
+                 failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 @end
 
 NS_ASSUME_NONNULL_END

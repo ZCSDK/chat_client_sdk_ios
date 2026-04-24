@@ -47,7 +47,8 @@ typedef NS_OPTIONS(NSUInteger, SobotEmojiLabelLinkType) {
 @property (nonatomic, copy) NSString *customEmojiRegex; //自定义表情正则
 @property (nonatomic, copy) NSString *customEmojiPlistName; //xxxxx.plist 格式
 @property (nonatomic, copy) NSString *customEmojiBundleName; //自定义表情图片所存储的bundleName xxxx.bundle格式
-@property (nonatomic,assign) BOOL isGuideCell;// 是否是多轮会话的• 
+@property (nonatomic,assign) BOOL isGuideCell;// 是否是多轮会话的•
+@property (nonatomic, assign) BOOL preserveExternalParagraphStyle; // 是否保留外部富文本段落样式
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-property-synthesis"
 @property (nonatomic, weak) id<SobotEmojiLabelDelegate> delegate; //点击连接的代理方法

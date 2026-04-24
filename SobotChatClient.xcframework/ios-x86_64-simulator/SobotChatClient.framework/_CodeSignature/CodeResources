@@ -4,6 +4,18 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/SobotCommon.framework/Info.plist</key>
+		<data>
+		/1PS6EsVGLySa39I5wJlSbty/LI=
+		</data>
+		<key>Frameworks/SobotCommon.framework/SobotCommon</key>
+		<data>
+		Ej760PzrZGCuImynQ44/hh1FNpA=
+		</data>
+		<key>Frameworks/SobotCommon.framework/_CodeSignature/CodeResources</key>
+		<data>
+		JwbvKK7WYb7z11sKDF0kOwj0hfo=
+		</data>
 		<key>Headers/SobotChatClient.h</key>
 		<data>
 		JELR5vXLAk3DEDjWCEv5W8BGbKM=
@@ -26,7 +38,7 @@
 		</data>
 		<key>Headers/SobotMarkdownParser.h</key>
 		<data>
-		nkep/tE8brLU+y61jFG80osH6uM=
+		vAGnoD2f5K9oJZhehi+Rv5eM4vQ=
 		</data>
 		<key>Headers/SobotMessageDefines.h</key>
 		<data>
@@ -78,7 +90,7 @@
 		</data>
 		<key>Headers/ZCLibServer.h</key>
 		<data>
-		PN05QxgZ+g3CAKSmRtOg3NPmYqI=
+		kjUbQnT3a0Aa6eNIq0HO5tUPjGQ=
 		</data>
 		<key>Headers/ZCLibSkillSet.h</key>
 		<data>
@@ -118,7 +130,7 @@
 		</data>
 		<key>Headers/ZCSatisfactionConfig.h</key>
 		<data>
-		LvgiQ/kxclcgLzNeBP5MCLjzNsM=
+		Fla0s4fzs9oFJHJVOrS+C34xx/4=
 		</data>
 		<key>Headers/ZCUICustomActionSheetModel.h</key>
 		<data>
@@ -143,6 +155,27 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/SobotCommon.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AxQb9JpJBRALpuKgzgQ1zEC2R8mit79AJ7z4oAuIDJQ=
+			</data>
+		</dict>
+		<key>Frameworks/SobotCommon.framework/SobotCommon</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FG/hSgJZu5NXgKGcfQPDDMwl62h9tfH7nAt0jPJoG1I=
+			</data>
+		</dict>
+		<key>Frameworks/SobotCommon.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BvE99Sbo/OA0kIBRTDQm0/QlqA74jcKDCu38Y3RIfUM=
+			</data>
+		</dict>
 		<key>Headers/SobotChatClient.h</key>
 		<dict>
 			<key>hash2</key>
@@ -182,7 +215,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gX1pW8JTKshcbuwCr4cvW9ccaFmA59YsgynU/KOoWyQ=
+			TJC74VwNoHw0CImr29g6cz392IoYGwQ6vSp3y5b1uns=
 			</data>
 		</dict>
 		<key>Headers/SobotMessageDefines.h</key>
@@ -273,7 +306,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a13bZHuIGPCiHWmlTn+RRXCX4qgZs93MHUQ9lne2djc=
+			opghCS3sRMdRNc4/+rWFD4Yh1a/duH8qBwuTT0/ISWs=
 			</data>
 		</dict>
 		<key>Headers/ZCLibSkillSet.h</key>
@@ -343,7 +376,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ED6opMNgXCnZHWwg3zKu9ZkmRXgKihM9aGtA2b7Zf/w=
+			/ewB7Ph/PUpaWxeo0M7KuRXg34dVUgt+oEXJikBIFRE=
 			</data>
 		</dict>
 		<key>Headers/ZCUICustomActionSheetModel.h</key>

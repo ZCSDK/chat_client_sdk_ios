@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) id objTag;
 
 
+// 开启按压效果
+@property(nonatomic,strong) UIColor *pressBgColor;
+
+
 // 如果返回UIColor，会自动赋值给self.layer.borderColor,返回空不处理
 // sView为控件本身
 @property (nonatomic, copy, nullable) UIColor *(^traitCollectionChangedBlock)(UITraitCollection *previousTraitCollection,UIView *sView); // 点击事件Block

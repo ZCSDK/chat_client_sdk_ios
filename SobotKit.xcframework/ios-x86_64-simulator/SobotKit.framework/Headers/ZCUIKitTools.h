@@ -127,6 +127,11 @@ static SobotTypeColor const _Nullable SobotColorZoneBg = @"SobotColorZoneBg";//
 
 /// 设置导航栏颜色
 +(UIColor *)zcgetNavBackGroundColorWithSize:(CGSize)size;
+
+// 导航栏是白色还是黑色 1 light 2 dark 3 color
+// 导航栏上面的头像 占位图有3种样式 对应导航栏颜色
++(int)getNavBackGroundColorType;
+
 /// 设置是否使用黑色
 +(BOOL)isBlackColorIcon;
 

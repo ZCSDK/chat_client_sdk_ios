@@ -59,6 +59,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 切换暗夜模式重新切换 黑白图标
 -(void)updateNavcIcon;
+
+
+-(void)changeHoverFrame:(SobotButton *) btn;
+
 @end
 
 NS_ASSUME_NONNULL_END
