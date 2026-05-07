@@ -58,6 +58,10 @@ NSString *sobotUrlDecodedString(NSString *url);
 /// @param regexStr 自定义正则
 BOOL sobotIsUrl(NSString *urlString,NSString *regexStr);
 
+
+/// 返回默认url正则表达式
+NSString * sobotUrlRegular(void);
+
 // 号码隐藏 0.不隐藏 1.中间隐藏 2.末尾隐藏  电销任务数据号码是否隐藏
 NSString * sobotNumberSuitScanf(NSString*number,int scanfType);
 
@@ -69,6 +73,10 @@ NSString* sobotTrimString (NSString* input);
 
 
 
+
+
+/// 获取默认电话号码正则
+NSString * sobotGetTelRegular(void);
 
 // 验证
 BOOL sobotValidateEmail(NSString* email);
