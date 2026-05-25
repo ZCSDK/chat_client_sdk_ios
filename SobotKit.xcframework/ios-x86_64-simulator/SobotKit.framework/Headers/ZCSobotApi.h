@@ -57,6 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param messagelinkBlock 获取到链接，如果返回 YES 则拦截
 +(void)setMessageLinkClick:(BOOL (^)(ZCLinkClickType type,NSString *linkUrl,id _Nullable object))messagelinkBlock;
 
+/// 监听页面返回事件
+/// @param gobackBlock 设置back 拦截回调
++(void)setGoBackClick:(BOOL(^)(UIViewController *_Nullable vc,id _Nullable object))gobackBlock;
 
 /// 点击拦截 小程序事件
 /// @param appletBlock 获取到的参数对象

@@ -228,7 +228,8 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 
 @property(nonatomic,copy) void (^ _Nullable ZCViewControllerCloseBlock)(id _Nullable object,ZCPageCloseType type);
 @property(nonatomic,copy) BOOL (^ _Nullable LinkClickBlock)(ZCLinkClickType type,NSString * _Nullable linkUrl,id _Nullable object);
-
+// 定制 用户自己拦截返回事件，页面跳转由用户自己控制处理
+@property(nonatomic,copy) BOOL (^ _Nullable GoBackBlock)(UIViewController *_Nullable vc,id _Nullable object);
 
 -(void)doInitSDK:(id<ZCUICoreDelegate>_Nullable) delegate block:(void(^_Nullable)(ZCInitStatus status,NSString * _Nullable message,id _Nullable initobj,ZCLibConfig *_Nullable confg)) resultBlock;
 
