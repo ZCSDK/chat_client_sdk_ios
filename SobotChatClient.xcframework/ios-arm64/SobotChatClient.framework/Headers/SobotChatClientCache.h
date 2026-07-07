@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSString *)localKitString:(NSString *) key;
 
+/// 按指定语言获取 SobotKit 文案，用于语言选择流程中“展示语言”和最终语言未绑定的场景。
+/// @param language 语言码，例如 km、hi、zh-Hans、zh-Hant；区域码会按本地资源归一化。
++(NSString *)localKitString:(NSString *)key language:(NSString *)language;
+
 // 检测当前配置语言是否为RTL
 +(BOOL)checkKitIsRTLLayout;
 

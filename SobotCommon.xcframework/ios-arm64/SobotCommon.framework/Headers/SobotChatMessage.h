@@ -884,6 +884,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 提示语
 @property (nonatomic,strong) NSString  *tipsMessage;
 
+// 语言选择卡片的展示语言，只用于 SobotMessageActionTypeLanguage 本地消息，不代表用户最终选择语言
+@property (nonatomic,copy) NSString *languageSelectionDisplayLanguage;
+
 /**
  *  头像
  */
@@ -1273,5 +1276,4 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-
 
