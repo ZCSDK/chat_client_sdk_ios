@@ -20,6 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 已经加载过历史记录
 @property(nonatomic,assign) BOOL isHadCidLoaded;
+// 是否正在加载历史会话 cid 列表，避免初始化阶段重复请求
+@property(nonatomic,assign) BOOL isLoadingCids;
+// 是否正在加载指定 cid 的历史消息，避免多入口重复插入同一批历史
+@property(nonatomic,assign) BOOL isLoadingHistory;
+// 当前正在加载历史消息的 cid，用于区分连续加载多个历史会话
+@property(nonatomic,copy) NSString *_Nullable loadingHistoryCid;
 
 // 是否锁定当前的消息
 @property(nonatomic,assign) BOOL isLockMsg;
