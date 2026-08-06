@@ -625,6 +625,33 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
  */
 +(void)isCommentAiAgent:(ZCLibConfig *)config result:(void (^)(ZCNetWorkCode, int, NSString *))resultBlock;
 
+/**
+ 检查当前会话是否可发起满意度评价邀请。
+
+ 本接口用于“会话结束自动邀评”前置判断，当前业务只在人工会话结束/超时结束时调用。
+ 接口成功时由服务端返回 isComment：
+ - 0：允许邀评，调用方继续展示评价入口/弹窗。
+ - 其它值：不允许邀评，调用方应静默拦截，不新增访客侧提示。
+ 接口失败或响应异常时，调用方按原有本地评价逻辑继续判断，避免网络问题阻断现有流程。
+
+ @param config 当前会话配置，必须包含 uid 和 cid。
+ @param type 评价对象类型，0=机器人，1=人工；本次人工自动邀评固定传 1。
+ @param commentType 评价触发类型，1=主动评价，0=邀请评价；会话结束自动邀评固定传 0。
+ @param resultBlock code 为接口调用结果；isComment 为服务端可邀评状态；msg 为服务端返回说明。
+ */
++(void)isComment:(ZCLibConfig *)config type:(NSInteger)type commentType:(NSInteger)commentType result:(void (^)(ZCNetWorkCode code, NSInteger isComment, NSString *msg))resultBlock;
+
+/**
+ 记录一次人工会话自动邀评次数。
+
+ 当 isComment 返回 0 且 SDK 实际展示了评价入口/弹窗后调用。
+ 该接口只负责计数，失败不阻断评价展示和提交，也不向访客展示错误提示。
+
+ @param config 当前会话配置，必须包含 uid。
+ @param resultBlock code 为接口调用结果；msg 为服务端返回说明。
+ */
++(void)recordInviteFreq:(ZCLibConfig *)config result:(void (^)(ZCNetWorkCode code, NSString *msg))resultBlock;
+
 
 /**
  *  清空历史消息

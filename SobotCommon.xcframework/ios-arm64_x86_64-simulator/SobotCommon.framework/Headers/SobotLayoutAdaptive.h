@@ -61,6 +61,20 @@ typedef NS_ENUM(NSInteger, SobotLayoutSizeClass) {
 /// 页面左右 margin
 + (CGFloat)pageHorizontalMarginForSizeClass:(SobotLayoutSizeClass)c;
 
+#pragma mark - 栅格(PR4 / 二期使用)
+
+/// 当前尺寸下的页面栅格总列数。
++ (NSInteger)gridColumnCountForSize:(CGSize)size;
+
+/// 当前尺寸下的页面横向边距。
++ (CGFloat)gridHorizontalMarginForSize:(CGSize)size;
+
+/// 根据可用宽度、总列数和目标占用列数计算栅格宽度。
++ (CGFloat)gridWidthWithAvailableWidth:(CGFloat)availableWidth
+                           totalColumns:(NSInteger)totalColumns
+                          targetColumns:(NSInteger)targetColumns
+                              columnGap:(CGFloat)columnGap;
+
 @end
 
 NS_ASSUME_NONNULL_END

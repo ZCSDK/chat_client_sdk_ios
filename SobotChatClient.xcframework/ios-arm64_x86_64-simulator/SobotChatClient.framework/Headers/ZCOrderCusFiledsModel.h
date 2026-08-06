@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 时区+ 日期时间 特殊字段处理
 @property (nonatomic,copy) NSString *timezoneId;
+// 时区回显的值
+@property (nonatomic,copy) NSString *timezoneValue;
 @property (nonatomic,copy) NSString *resultText;
 
 

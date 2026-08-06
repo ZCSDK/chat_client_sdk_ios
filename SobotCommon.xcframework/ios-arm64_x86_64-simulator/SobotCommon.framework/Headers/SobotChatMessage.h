@@ -251,6 +251,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 通用卡片信息
 @interface SobotChatCustomCardInfo: SobotBaseEntity
 
+// customCardLinkType  同步interfaceInfo中 customCardType中的值
+@property(nonatomic,copy)NSString *customCardLinkType;
+
 // customCardType    卡片动作类型，0-发送，1-自定义跳转   null 不做任何处理
 @property(nonatomic,copy)NSString *customCardType;
 
@@ -798,6 +801,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) SobotChatContent *richModel;
 @property(nonatomic,strong) SobotChatRobotAnswerContent *robotAnswer;
 
+/**
+ * 大模型机器人推荐问题列表，对应接口 guessAskList 字段。
+ */
+@property(nonatomic,strong) NSMutableArray *guessAskList;
+
 // 大模型机器人 点踩点赞 传answer 提交接口使用
 @property(nonatomic,copy) NSString *ackAnswer;
 // 当前机器人 点踩标签 提示语
@@ -1276,4 +1284,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-

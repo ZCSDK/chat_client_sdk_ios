@@ -193,6 +193,15 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 // 临时变量记录当前是否是排队中
 @property(nonatomic,assign)BOOL isWaiting;
 
+/**
+ * 记录当前会话内已经被消费的待发送商品卡片 key。
+ *
+ *  待发送商品卡片是 SDK 根据 kitInfo.productInfo 本地生成的临时消息，
+ *  服务端不会下发一个独立状态来标记它是否已经发送过。这里用 cid + link + title
+ *  生成 key，作为全局状态控制同一会话内是否还允许再次展示这张本地卡片。
+ */
+@property(nonatomic,copy) NSString * _Nullable sendGoodsCardHiddenKey;
+
 @property(nonatomic,strong) NSMutableArray * _Nullable cids;
 @property(nonatomic,strong) NSMutableArray * _Nullable chatMessages;
 @property(nonatomic,weak) id<ZCUICoreDelegate> _Nullable delegate;
@@ -259,6 +268,28 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 
 // 发送商品卡片
 -(void)sendProductInfo:(ZCProductInfo *_Nonnull)productInfo resultBlock:(nonnull void (^)(NSString * _Nonnull, int code))ResultBlock;
+
+/**
+ * 判断当前 productInfo 对应的待发送商品卡片是否允许展示。
+ *
+ * 开关关闭时始终返回 YES，保持历史逻辑；开关开启时，如果当前会话内同一张
+ * 商品卡片已经在点击发送后被标记消费，则返回 NO，避免 sendCusMsg 等刷新链路
+ * 又把已经消失的 ZCChatSendGoodsCell 加回来。
+ */
+-(BOOL)canShowCurrentSendGoodsCard;
+
+/**
+ * 在点击待发送商品卡片「发送」后，按配置立即隐藏原卡片。
+ *
+ * 本需求不依赖发送成功/失败回调，发送动作发起后即可让原卡片消失。
+ * 方法内部会先写入 sendGoodsCardHiddenKey，再从 chatMessages 中移除
+ * msgType=TipsText 且 action=SendGoods 的本地待发送商品卡片，并通知页面刷新。
+ *
+ * @return YES 表示本次确实执行了隐藏处理；NO 表示开关未开启、缺少 productInfo
+ *         或列表中没有可移除的待发送商品卡片。
+ */
+-(BOOL)hideCurrentSendGoodsCardAfterSendIfNeeded;
+
 -(void)sendMessage:(NSString *_Nonnull) content type:(SobotMessageType) msgType exParams:(NSDictionary * _Nullable) dict duration:(NSString *_Nullable) duration richType:(SobotMessageRichJsonType )richType;
 
 // 添加一个扩展对象，可以传递添加引用消息
@@ -329,6 +360,15 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 -(BOOL)checkSatisfacetion:(BOOL) isEvalutionAdmin type:(SobotSatisfactionFromSrouce ) type;
 // 邀请评价是，有值了
 -(BOOL)checkSatisfacetion:(BOOL) isEvalutionAdmin type:(SobotSatisfactionFromSrouce ) type rating:(int) rating resolve:(int) resolve;
+/// 调用 isComment 接口检查是否可自动邀评。
+/// 接口成功且 isComment=0 时执行 passBlock；接口成功但 isComment 非 0 时执行 blockBlock 并静默拦截；接口失败时执行 failBlock，由调用方回到原有本地判断逻辑。
+/// @param passBlock 可邀评时的继续流程。
+/// @param blockBlock 不可邀评时的静默拦截流程，参数为服务端返回的 isComment。
+/// @param failBlock 接口失败或异常时的降级流程。
+-(void)checkInviteFrequencyWithPass:(void (^_Nullable)(void))passBlock block:(void (^_Nullable)(NSInteger isComment))blockBlock fail:(void (^_Nullable)(void))failBlock;
+/// 在评价弹窗/入口已经实际展示后记录邀评次数。
+/// 只记录自动邀评，不用于主动评价或客服手动邀评；失败仅写日志，不影响用户继续评价。
+-(void)recordInviteFrequencyIfNeeded;
 // 邀请评价，提交
 - (void)commitSatisfactionWithIsResolved:(int)isResolved Rating:(int)rating problem:(NSString *) problem scoreFlag:(float)scoreFlag scoreExplain:(NSString * _Nullable) scoreExplain checkScore:(ZCLibSatisfaction *) model;
 

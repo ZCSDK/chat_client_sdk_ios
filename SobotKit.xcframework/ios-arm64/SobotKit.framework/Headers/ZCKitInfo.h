@@ -337,6 +337,15 @@
  *  产品信息
  */
 @property(nonatomic,strong) ZCProductInfo *productInfo;
+
+/**
+ *  访客点击待发送商品卡片的「发送」按钮后，是否隐藏原待发送商品卡片。
+ *
+ *  默认 NO，保持历史行为：发送后原 ZCChatSendGoodsCell 仍停留在聊天列表中。
+ *  设置 YES 后，只要 SDK 已经发起商品卡片发送动作，就会立即移除当前会话内
+ *  由 productInfo 生成的待发送商品卡片，并通过本地状态避免同一会话内再次生成。
+ */
+@property (nonatomic,assign) BOOL isHideSendGoodsCardAfterSend;
 //
 ///**
 // * 需要发送的订单信息

@@ -131,6 +131,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)resetKeyBoardView;
 
+// sheet 外层 safeArea 稳定后，重新刷新横屏安全区布局。
+-(void)refreshSheetLandscapeSafeAreaLayout;
+
 @end
 
 NS_ASSUME_NONNULL_END
