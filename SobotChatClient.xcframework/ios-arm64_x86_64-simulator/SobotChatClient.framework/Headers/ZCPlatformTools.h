@@ -28,7 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 留言记录状态
 @property(nonatomic,strong) NSMutableDictionary *_Nullable orderStatusDict;
 -(NSString *)getOrderStatus:(int ) status;
-
+// 获取工单状态 statusType // 状态类别 1-新建，2-受理中 3-等待客户回复 4-暂停 5-已解决 6-已关闭 7-已删除
+-(int)getOrderStatusType:(int)status;
 /**
  根据statusCode获取显示类型
  状态类别 1-新建，2-受理中 3-等待客户回复 4-暂停 5-已解决 6 已关闭 7 已删除

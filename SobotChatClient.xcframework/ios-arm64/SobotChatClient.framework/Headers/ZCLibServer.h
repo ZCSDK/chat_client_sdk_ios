@@ -339,6 +339,13 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
 +(void)loginOutPush:(void (^)(NSString *, NSString *,NSError *))resultBlock;
 +(void)logOut:(ZCLibConfig *)config;
 
+/**
+ 幂等停止当前大模型机器人的静默提醒轮询。
+
+ SobotKit 只通过此公开门面关闭轮询，不直接依赖内部解析器。
+ */
++(void)stopAiAgentNoSpeakPolling;
+
 
 /// 查询热点问题引导语
 /// @param _config <#_config description#>

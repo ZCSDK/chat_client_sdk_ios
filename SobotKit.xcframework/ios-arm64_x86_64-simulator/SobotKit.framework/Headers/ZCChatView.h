@@ -54,6 +54,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 更新数据
 -(void)viewReloadTableData;
 
+/// 横竖屏或容器尺寸切换时，重置“换业务”悬浮按钮到默认吸附位置。
+/// 与 viewReloadTableData 分开，避免普通消息刷新把用户拖拽后的位置重置。
+-(void)updateChangeRobotButtonForSizeTransition;
+
 -(void)beginAniantions;
 
 /// 是否为点击关闭按钮

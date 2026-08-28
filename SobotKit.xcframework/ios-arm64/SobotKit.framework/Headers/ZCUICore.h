@@ -213,6 +213,10 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 
 // 录音消息，已弃用
 @property(nonatomic,strong) SobotChatMessage * _Nullable recordModel;
+// 是否正在请求是否有留言更新
+@property(nonatomic,assign) BOOL isCheckUserTicket;
+// 记录当前节点状态，用来判断是否可以调用留言有更新的条件
+@property(nonatomic,assign) int chatEventState;
 
 
 // 滑动时，记录已阅读的消息
@@ -317,6 +321,20 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 /// @param message 消息内容
 -(SobotChatMessage *_Nullable)addMessageToList:(SobotMessageActionType) action content:(NSString * _Nullable) content type:(SobotMessageType )msgType dict:(NSDictionary * _Nullable) message;
 -(void)addMessage:(SobotChatMessage * _Nullable) message reload:(BOOL) isReload;
+
+/// 判断消息是否为大模型静默轮询产生的内部提醒消息。
+/// 方法会校验 message、exParams 及标记值的运行时类型，避免异常值（如 NSNull）触发崩溃。
+/// @param message 待判断的聊天消息。
+-(BOOL)isNoSpeakPollingMessage:(SobotChatMessage * _Nullable)message;
+
+/// 接收大模型静默轮询产生的独立提醒消息。
+/// 聊天页面可实时回显时走现有机器人消息链路；离页或消息容器恢复期间写入 platformInfo.messageArr。
+/// @param message 静默轮询已经解析完成的机器人文本消息。
+-(void)receiveNoSpeakPollingMessage:(SobotChatMessage * _Nullable)message;
+
+/// 标记聊天页面正在进入或退出切换，当前 chatMessages 容器暂不可用。
+/// 切换窗口到达的静默消息会写入 platformInfo.messageArr，避免落入即将被替换或清空的数组。
+-(void)prepareNoSpeakMessageStoreForPageTransition;
 
 
 /// 移除指定类型消息
@@ -435,6 +453,10 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 -(void)setIsShowFormPage:(BOOL)isShow;
 #pragma mark -- 获取询前表单是否可以显示
 -(BOOL)getIsShowFormPage;
+
+// 重后台回到前台，或者锁屏到解锁之后检查是否有留言更新状态
+-(void)checkUserTicketAndNodeState;
+
 #pragma mark -- 初始化完成后渲染页面数据
 -(void)initUIAndGetCidMsg;
 #pragma mark -- 转人工不成功 跳转留言 点击了技能组中的留言

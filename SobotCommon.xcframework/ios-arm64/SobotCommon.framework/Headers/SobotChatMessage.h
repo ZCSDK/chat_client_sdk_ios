@@ -860,6 +860,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy) NSString *nodeId;
 // 按钮的数据 字符串
 @property (nonatomic,strong) NSMutableArray *variableValueEnums;
+
+// 大模型按钮消息和卡片消息新增轮次ID，用于 AI机器人 问答
+@property (nonatomic,copy) NSString *roundId;
+
+
 // 记录当前是显示的第几页
 @property (nonatomic,assign) int currentPage;
 

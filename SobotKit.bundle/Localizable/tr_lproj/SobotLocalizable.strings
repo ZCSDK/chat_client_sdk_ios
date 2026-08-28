@@ -229,12 +229,12 @@
 "重新填写信息" = "Bilgileri tekrar doldur";
 "请选择是否解决了您的问题" = "Lütfen sorununuz çözüldüğünü seçin.";
 "标签" = "Etiket";
-"是否解决" = "Çözümlenmiş";
+"是否解决" = "Çözüldü mü?";
 "引用" = "Alıntı";
 "我" = "Ben";
 "机器人" = "Robot";
-"文章" = "Article";
-"链接" = "Link";
+"文章" = "Makale";
+"链接" = "Bağlantı";
 "您好，客服 #客服昵称# 为您提供服务" = "Merhaba, müşteri hizmetleri #Müşteri takma adı# size hizmet etmek için burada.";
 "对不起，未能解决您的问题，正在为您转接人工客服" = "Üzgünüz sorununuzu çözemedik. Sizi insan müşteri hizmetlerine aktarıyoruz.";
 "已选" = "Seçili";
@@ -256,7 +256,7 @@
 "填写信息" = "Bilgi doldur";
 "排队自动断开结束会话" = "Otomatik bağlantısını kapattıktan sonra oturum bitir";
 "小程序" = "Applet";
-"小程序只能通过微信打开" = "Applet can only be opened through wechat";
+"小程序只能通过微信打开" = "Sesi berakhir karena terputus otomatis saat mengantre";
 "解析中..." = "ParsingAnalisi";
 "换一批" = "Daha fazla";
 "转换失败" = "Görüntüleri değiştir";

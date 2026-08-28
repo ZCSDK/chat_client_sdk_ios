@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) UIColor *btnTitleColor;
 @property(nonatomic,strong)UIImage *clostBtnImg;
-// 是否启用横屏安全区自适配，默认 NO。当前只在留言时间+日期字段的时区二级弹窗开启，避免影响其他业务弹窗。
+// 是否启用横屏安全区自适配，默认 NO。当前由时区、区号二级弹窗开启，其他业务弹窗保持旧布局。
 @property (nonatomic,assign) BOOL zc_enableLandscapeSafeAreaLayout;
 // 1 总结分类
 @property (nonatomic, strong)  void(^ChooseResultBlock) (id _Nullable item,NSString *names,NSString *ids);

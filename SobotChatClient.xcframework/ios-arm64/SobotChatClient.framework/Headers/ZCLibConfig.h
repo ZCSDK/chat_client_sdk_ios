@@ -834,13 +834,13 @@ private String semanticsKeyWordQuestion;
 @property (nonatomic,strong) NSString *msgContent;
 @property (nonatomic,strong) NSString *question;
 @property (nonatomic,strong) NSString *requestText;
-
 // 0,普通消息，1，有docId的普通消息，2有docId的多伦消息  3.大模型机器人点击btn 按钮  4.大模型机器人点击自定义卡片发送消息
 @property (nonatomic,strong) NSString *questionFlag;
 @property (nonatomic,strong) NSString *docId;
 @property (nonatomic,strong) NSString *duration;
 @property (nonatomic,assign) int robotflag;
-
+// 大模型按钮 点击的轮次ID
+@property (nonatomic,strong) NSString *clickRoundId;
 // 内部知识库 fromEnum=4，机器人知识库=3 ，5快捷问
 @property (nonatomic,strong) NSString *fromEnum;
 
