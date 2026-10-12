@@ -339,3 +339,12 @@
 "工单编号" = "İş emri numarası";
 "已复制工单编号" = "İş emri numarası kopyalandı";
 "点击上传" = "Yüklemek için tıklayın";
+"最多只能选择 10 个附件" = "En fazla 10 ek seçebilirsiniz";
+"上传中 · %ld%%" = "Yükleniyor · %ld%%";
+"上传失败" = "Yükleme başarısız";
+"删除附件" = "Eki sil";
+"重新上传" = "Yeniden yükle";
+"发送失败" = "Gönderilemedi";
+"重发" = "Tekrar gönder";
+"最多添加 10 个附件" = "En fazla 10 ek ekleyin";
+"不支持该类型的文件上传" = "Bu dosya türü desteklenmiyor";

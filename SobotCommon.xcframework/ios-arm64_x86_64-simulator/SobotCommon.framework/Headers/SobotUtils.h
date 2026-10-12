@@ -76,8 +76,11 @@ NSString * sobotNumberSuitScanf(NSString*number,int scanfType);
  */
 NSString* sobotTrimString (NSString* input);
 
-
-
+/**
+ *  获取当前窗口的 Bounds 替换原 [UIScreen mainScreen].bounds
+ *
+ */
+CGRect sobotScreenBounds(void);
 
 
 // 验证

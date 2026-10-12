@@ -67,24 +67,24 @@
 #define ZCNotificatCenter   [NSNotificationCenter defaultCenter]
 
 // 设备屏幕尺寸的宽度
-#define SysScreenWidth                      [[UIScreen mainScreen] bounds].size.width
+#define SysScreenWidth                      ([SobotUITools sobotCurrentWindowSize].width)
 
 // 设备屏幕尺寸的高度
-#define SysScreenHeight                     [[UIScreen mainScreen] bounds].size.height
+#define SysScreenHeight                     ([SobotUITools sobotCurrentWindowSize].height)
 
 
 // 屏幕旋转后宽度的尺寸
-#define ScreenWidth                         (Sobot_IsPortrait ? MIN(SysScreenWidth,SysScreenHeight) : MAX(SysScreenWidth,SysScreenHeight))
+#define ScreenWidth                         SysScreenWidth
 
 // 屏幕旋转后高度的尺寸
-#define ScreenHeight                        (Sobot_IsPortrait ? MAX(SysScreenWidth,SysScreenHeight) : MIN(SysScreenWidth,SysScreenHeight))
+#define ScreenHeight                        SysScreenHeight
 
 
 // iPhoneX
 #define Sobot_iPhoneX  [SobotUITools getIsIphonX]//(((SysScreenWidth == 375.f && SysScreenHeight == 812.f ) ||(SysScreenHeight == 375.f && SysScreenWidth == 812.f ) || (SysScreenHeight == 414.f && SysScreenWidth == 896.f ) || (SysScreenWidth == 414.f && SysScreenHeight == 896.f ))? YES : NO)
 
 // 状态栏的高度
-#define StatusBarHeight                     (Sobot_iPhoneX ? [[UIApplication sharedApplication] statusBarFrame].size.height : 20.0)
+#define StatusBarHeight                     ([SobotUITools sobotGetStatusBarHeight])
 // 导航栏的高度
 #define isLandspace     !Sobot_IsPortrait
 #define NavLandspaceBarHeight               ([UIApplication sharedApplication].statusBarHidden?32.0:64.0)

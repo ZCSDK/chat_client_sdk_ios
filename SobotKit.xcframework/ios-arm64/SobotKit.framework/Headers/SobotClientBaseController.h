@@ -48,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SobotClientBaseController : SobotBaseController
 
+/// 当前控制器内容区顶部 Y 坐标：系统导航取 safe area，自定义导航取自定义导航底部。
+- (CGFloat)sobot_contentTopY;
+
 // 更新导航栏背景色和渐变色
 -(void)updateTopViewBgColor;
 

@@ -70,10 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(UITextView *)getChatTextView;
 
 -(void)hiddenKeyboard;
-
-/// 阶段一:启用自适应布局接管(默认 NO,opt-in)
-/// host VC 在创建 ZCChatView 之后 set 一次;ZCChatView 会向下传到 _keyboardTools
-@property (nonatomic, assign) BOOL enableAdaptiveLayout;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -170,6 +170,11 @@ typedef NS_ENUM(NSInteger, ZCNetWorkCode) {
      *  有编码错误。
      */
     ZC_KNOWNCODE_FAIL = -3,
+
+    /**
+     *  上传文件类型不支持。
+     */
+    ZC_NETWORK_UPLOAD_UNSUPPORTED_FILE_TYPE = -4,
 };
 
 /**

@@ -87,6 +87,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///   -- 用户信息，新旧权限信息
 -(void)doAppLogin:(NSString *  _Nullable)loginAcount pwd:(NSString *  _Nullable)loginPwd status:(int) loginStatue exParams:(SobotLoginParams *)inParams result:(void (^)(NSInteger code, NSDictionary * _Nullable, NSString * _Nullable))resultBlock;
 
+/// 使用 Google ID Token 登录 APP；成功后复用原有权限查询和 appEnter 流程。
+-(void)doGoogleAppLogin:(NSString *)idToken email:(NSString *)email appParams:(SobotLoginParams * _Nullable)inParams result:(void (^)(NSInteger code, NSDictionary * _Nullable, NSString * _Nullable))resultBlock;
+
 /// 登录
 /// - Parameters:
 ///   - loginAcount: 账号

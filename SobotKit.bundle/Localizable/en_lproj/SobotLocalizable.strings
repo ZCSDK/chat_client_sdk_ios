@@ -339,3 +339,12 @@
 "工单编号" = "Ticket Number";
 "已复制工单编号" = "Ticket number copied successfully.";
 "点击上传" = "Click to upload";
+"最多只能选择 10 个附件" = "You can select up to 10 attachments";
+"上传中 · %ld%%" = "Uploading · %ld%%";
+"上传失败" = "Upload failed";
+"删除附件" = "Delete attachment";
+"重新上传" = "Retry upload";
+"发送失败" = "Send failed";
+"重发" = "Resend";
+"最多添加 10 个附件" = "Add up to 10 attachments";
+"不支持该类型的文件上传" = "This file type is not supported";

@@ -193,7 +193,19 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
                 config:(ZCLibConfig *) libConfig
                     start:(void(^)(void))startBlock
                   success:(void(^)(NSString *fileName,NSString *fileURL,ZCNetWorkCode code)) successBlock
-                     fail:(void(^)(ZCNetWorkCode errorCode,NSString *errorMsg)) failBlock;
+                  fail:(void(^)(ZCNetWorkCode errorCode,NSString *errorMsg)) failBlock;
+
+/// 聊天组合消息附件上传。uploadId 只作为本地任务取消令牌，不会透传到服务端。
++(void)fileUploadForLeave:(NSString *)filePath
+                  uploadId:(NSString *)uploadId
+                    config:(ZCLibConfig *)libConfig
+                     start:(void (^ _Nullable)(void))startBlock
+                  progress:(void (^ _Nullable)(CGFloat progress))progressBlock
+                   success:(void (^)(NSString *fileName, NSString *fileURL, ZCNetWorkCode code))successBlock
+                      fail:(void (^)(ZCNetWorkCode errorCode, NSString * _Nullable errorMsg))failBlock;
+
+/// 取消聊天组合消息附件上传。
++(void)cancelFileUploadForLeaveWithUploadId:(NSString *)uploadId;
 
 /**
  *   获取 留言模板基础配置 2.7.1新增
@@ -399,6 +411,17 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
           progress:(void (^)(SobotChatMessage *message))progressBlock
               fail:(void (^)(SobotChatMessage *message,NSString *errorMsg, ZCNetWorkCode code))failBlock;
 
+
+
+
++(void)uploadChatFile:(NSString *)filePath
+                      type:(SobotMessageType) msgType
+                      params:(ZCLibSendMessageParams *) sendParams
+                    config:(ZCLibConfig *) _config
+                     start:(void (^)(NSString *url))startBlock
+                   success:(void (^)(NSString *fileName,NSString *url,NSString *snapshotURL, ZCNetWorkCode code))successBlock
+                  progress:(void (^)(CGFloat progress)) progressBlock
+                 fail:(void (^)(ZCNetWorkCode code,NSString *errorMsg))failBlock;
 
 /// 机器人评价
 /// @param config 获取uid、cid、robotFlag

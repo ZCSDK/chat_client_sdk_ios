@@ -339,3 +339,12 @@
 "工单编号" = "Nombor Tiket";
 "已复制工单编号" = "Nombor tiket kerja telah disalin";
 "点击上传" = "Klik untuk muat naik";
+"最多只能选择 10 个附件" = "Anda boleh memilih sehingga 10 lampiran";
+"上传中 · %ld%%" = "Memuat naik · %ld%%";
+"上传失败" = "Gagal memuat naik";
+"删除附件" = "Padam lampiran";
+"重新上传" = "Muat naik semula";
+"发送失败" = "Penghantaran gagal";
+"重发" = "Hantar semula";
+"最多添加 10 个附件" = "Tambah maksimum 10 lampiran";
+"不支持该类型的文件上传" = "Jenis fail ini tidak disokong";

@@ -339,3 +339,12 @@
 "工单编号" = "Mã đơn công việc";
 "已复制工单编号" = "Đã sao chép số phiếu hỗ trợ";
 "点击上传" = "Nhấp để tải lên";
+"最多只能选择 10 个附件" = "Bạn chỉ có thể chọn tối đa 10 tệp đính kèm";
+"上传中 · %ld%%" = "Đang tải lên · %ld%%";
+"上传失败" = "Tải lên không thành công";
+"删除附件" = "Xóa tệp đính kèm";
+"重新上传" = "Tải lên lại";
+"发送失败" = "Gửi thất bại";
+"重发" = "Gửi lại";
+"最多添加 10 个附件" = "Thêm tối đa 10 tệp đính kèm";
+"不支持该类型的文件上传" = "Không hỗ trợ tải lên loại tệp này";

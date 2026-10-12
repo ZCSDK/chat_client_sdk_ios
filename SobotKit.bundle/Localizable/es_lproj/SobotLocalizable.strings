@@ -339,3 +339,12 @@
 "工单编号" = "Número de ticket";
 "已复制工单编号" = "Se ha copiado el número de ticket.";
 "点击上传" = "Haga clic para cargar";
+"最多只能选择 10 个附件" = "Solo puede seleccionar hasta 10 archivos adjuntos";
+"上传中 · %ld%%" = "Cargando · %ld%%";
+"上传失败" = "Error al cargar";
+"删除附件" = "Eliminar archivo adjunto";
+"重新上传" = "Volver a cargar";
+"发送失败" = "Error al enviar";
+"重发" = "Reenviar";
+"最多添加 10 个附件" = "Añadir como máximo 10 archivos adjuntos";
+"不支持该类型的文件上传" = "No se admite este tipo de archivo";

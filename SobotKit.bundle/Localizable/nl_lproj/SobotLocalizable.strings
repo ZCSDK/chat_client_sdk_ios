@@ -339,3 +339,12 @@
 "工单编号" = "Werkordernummer";
 "已复制工单编号" = "Werkordernummer gekopieerd";
 "点击上传" = "Klik om te uploaden";
+"最多只能选择 10 个附件" = "U kunt maximaal 10 bijlagen selecteren";
+"上传中 · %ld%%" = "Uploaden · %ld%%";
+"上传失败" = "Upload mislukt";
+"删除附件" = "Bijlage verwijderen";
+"重新上传" = "Opnieuw uploaden";
+"发送失败" = "Verzenden mislukt";
+"重发" = "Opnieuw verzenden";
+"最多添加 10 个附件" = "Voeg maximaal 10 bijlagen toe";
+"不支持该类型的文件上传" = "Dit bestandstype wordt niet ondersteund";

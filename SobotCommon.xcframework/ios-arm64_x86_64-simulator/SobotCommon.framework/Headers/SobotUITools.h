@@ -86,6 +86,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否为竖屏
 +(BOOL) sobotIsPortrait;
 
+/// 获取当前应用 Scene/Window 的实际尺寸，兼容无 Scene 的旧系统
++ (CGSize)sobotCurrentWindowSize;
+
 // 获取当前最上层Window和VC
 +(UIWindow *)getCurWindow;
 + (UIViewController *)getCurrentVC;
@@ -216,6 +219,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void ) sobotButon:(UIButton *) iv hSpace:(CGFloat ) spacing top:(CGFloat )imgTBSpace rtl:(BOOL )isRTL;
 
 +(BOOL)getIsIphonX;
++ (CGFloat)sobotGetStatusBarHeight;
 + (CGFloat)sobotGetNavigationBarHeight;
 
 

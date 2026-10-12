@@ -339,3 +339,12 @@
 "工单编号" = "Ticket-Nummer";
 "已复制工单编号" = "Ticket-Nummer wurde kopiert.";
 "点击上传" = "Zum Hochladen klicken";
+"最多只能选择 10 个附件" = "Sie können höchstens 10 Anhänge auswählen";
+"上传中 · %ld%%" = "Wird hochgeladen · %ld%%";
+"上传失败" = "Upload fehlgeschlagen";
+"删除附件" = "Anhang löschen";
+"重新上传" = "Erneut hochladen";
+"发送失败" = "Senden fehlgeschlagen";
+"重发" = "Erneut senden";
+"最多添加 10 个附件" = "Maximal 10 Anhänge hinzufügen";
+"不支持该类型的文件上传" = "Dieser Dateityp wird nicht unterstützt";
