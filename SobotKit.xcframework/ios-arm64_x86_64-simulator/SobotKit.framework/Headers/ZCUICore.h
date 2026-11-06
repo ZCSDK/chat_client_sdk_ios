@@ -328,13 +328,18 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 -(BOOL)isNoSpeakPollingMessage:(SobotChatMessage * _Nullable)message;
 
 /// 接收大模型静默轮询产生的独立提醒消息。
-/// 聊天页面可实时回显时走现有机器人消息链路；离页或消息容器恢复期间写入 platformInfo.messageArr。
+/// 聊天页面可实时回显时走现有机器人消息链路；离页或消息容器恢复期间直接写入共享的会话消息数组。
 /// @param message 静默轮询已经解析完成的机器人文本消息。
 -(void)receiveNoSpeakPollingMessage:(SobotChatMessage * _Nullable)message;
 
 /// 标记聊天页面正在进入或退出切换，当前 chatMessages 容器暂不可用。
-/// 切换窗口到达的静默消息会写入 platformInfo.messageArr，避免落入即将被替换或清空的数组。
+/// 切换窗口到达的静默消息会从 platformInfo.messageArr 取得共享会话容器，避免写入尚未恢复完成的页面引用。
 -(void)prepareNoSpeakMessageStoreForPageTransition;
+
+/// 普通退出聊天页面时保留当前会话的消息容器。
+/// 这里保存的是 chatMessages 数组本身，不做 mutableCopy；这样页面离开后，
+/// 大模型 SSE 对已有消息的更新以及后续新增消息都会继续落在同一个会话数组中。
+-(void)persistCurrentSessionMessageStoreForPageExit;
 
 
 /// 移除指定类型消息

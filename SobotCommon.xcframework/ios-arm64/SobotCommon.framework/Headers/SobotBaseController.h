@@ -52,6 +52,13 @@ typedef NS_ENUM(NSInteger,SobotLayoutAxis) {
     SobotLayoutAxisHoritional = 2,
 };
 
+/// 自定义导航中间视图的横向布局方式。
+/// 普通标题保持整栏居中；聊天页的组合标题可填满左右按钮之间的可用区域。
+typedef NS_ENUM(NSInteger, SobotNavigationTitleLayoutMode) {
+    SobotNavigationTitleLayoutModeCentered = 0,
+    SobotNavigationTitleLayoutModeFillAvailableSpace = 1,
+};
+
 @interface SobotBaseController : UIViewController
 
 // 内容相对于view的正在开始坐标，主要计算导航的高度
@@ -93,7 +100,8 @@ typedef NS_ENUM(NSInteger,SobotLayoutAxis) {
 @property (nonatomic,strong) UIView * bottomLine;
 
 
-// 约束相关
+// 兼容读数：topViewEH 为未激活的总高镜像，布局后与实际导航底边同步；修改 constant 不驱动导航布局。
+// 导航行高与位置由父类统一管理，页面内容请绑定 sobot_contentTopAnchor。
 @property(nonatomic,strong)NSLayoutConstraint *topViewEH;
 @property(nonatomic,strong) NSLayoutConstraint *titleViewEW;
 @property(nonatomic,strong)NSLayoutConstraint *titleViewEH;
@@ -103,6 +111,14 @@ typedef NS_ENUM(NSInteger,SobotLayoutAxis) {
 @property(nonatomic,strong)NSLayoutConstraint *topContentViewPL;
 @property(nonatomic,strong)NSLayoutConstraint *topContentViewPR;
 @property(nonatomic,strong)NSLayoutConstraint *topContentViewEH;
+
+/// 供 SDK 子类屏蔽临时系统栏测量产生的中间布局；最终布局会再次通知。
+@property(nonatomic,readonly) BOOL sobot_navigationGeometryIsMeasuring;
+/// 子类在这里更新依赖最终内容 bounds 的 frame；不要在测量过程中自行布局导航。
+- (void)sobot_navigationGeometryDidLayout;
+/// 外层业务内容只绑定一次：顶部跟随导航 guide，底部跟随本页安全区。
+/// horizontalSafeArea=NO 供聊天/通栏背景使用；YES 供提交表单使用。内部子视图可继续用 frame。
+- (void)sobot_layoutNavigationContentView:(UIView *)content horizontalSafeArea:(BOOL)horizontalSafeArea;
 
 
 -(void)goBack;
@@ -149,6 +165,11 @@ typedef NS_ENUM(NSInteger,SobotLayoutAxis) {
 /// @param rightTags 右边按钮的数据
 /// @param titleView titleview  自定义view 默认空
 -(void)setLeftTags:(NSArray *__nullable)leftTags rightTags:(NSArray *__nullable)rightTags titleView:(UIView * __nullable)titleView ;
+/// 设置自定义中间视图及其横向布局方式。该模式控制自绘导航；系统导航中的特殊 titleView 可自行扩展固有宽度。
+-(void)setLeftTags:(NSArray *__nullable)leftTags
+         rightTags:(NSArray *__nullable)rightTags
+         titleView:(UIView * __nullable)titleView
+        layoutMode:(SobotNavigationTitleLayoutMode)layoutMode;
 -(void)updateBannerLeftTags:(NSArray *__nullable)leftTags rightTags:(NSArray *__nullable)rightTags titleView:(UIView * __nullable)titleView;
 
 
@@ -204,14 +225,25 @@ typedef NS_ENUM(NSInteger,SobotLayoutAxis) {
 
 #pragma mark - 阶段一 · 内容区布局 helper(可选,推荐用法)
 
+/// 当前页面的内容区域。自绘导航出现时顶部贴导航底部，左右及底部跟随本页安全区。
+/// 需要在折叠和旋转后自动避让导航的页面，可把交互内容约束到这个 guide。
+@property (nonatomic, strong, readonly) UILayoutGuide *sobot_contentViewportGuide;
+
+/// 临时隐藏当前页面实际使用的导航栏，并让内容区同步切到页面安全区顶部。
+///
+/// 仅改变运行时展示状态，不修改 navcBarHidden 等页面配置。自定义导航会在
+/// topView 与 safe-area guide 之间切换；系统导航继续交给 UINavigationController
+/// 更新安全区。恢复时保留原导航按钮、标题、主题和已测得的行高。
+/// 该方法不监听键盘、不做全局自动切换；只有显式调用它的当前页面会受影响。
+/// 当前键盘联动仅由 ZCChatController 在聊天页紧凑横屏场景调用。
+- (void)sobot_setNavigationTemporarilyHidden:(BOOL)hidden
+                                     duration:(NSTimeInterval)duration
+                                      options:(UIViewAnimationOptions)options;
+
 /// 内容区顶部锚点(用于子类页面把内容贴到"导航下方")
 ///
-/// 返回的 anchor 已经自动处理三种场景,横竖屏 / 导航类型 / iOS 版本切换全自驱:
-///   1. 自定义导航(self.topView != nil):  返回 self.topView.bottomAnchor
-///   2. 系统导航 + iOS 11+:              返回 self.view.safeAreaLayoutGuide.topAnchor
-///      (UIKit 自动处理 translucent / 不 translucent,实际位置 = navBar 底)
-///   3. 系统导航 + iOS 9/10:             返回 self.topLayoutGuide.bottomAnchor
-///      (iOS 7+ API,实际位置 = navBar 底,与 safeAreaLayoutGuide 行为一致)
+/// 返回稳定 guide 的顶部锚点：系统导航由 UIKit safeArea 定位；自定义顶部导航贴其底部。
+/// iOS 9/10 的旧系统导航仍回退到 topLayoutGuide。
 ///
 /// 用法:
 ///   [myView.topAnchor constraintEqualToAnchor:[self sobot_contentTopAnchor] constant:16].active = YES;

@@ -208,6 +208,11 @@
 @property (nonatomic,strong) NSString *userRemark NS_DEPRECATED_IOS(1.0,2_8_0,"remark");
 
 
+/**
+* 客户分类
+* nil 或空字符串不清空 CRM 已有分类
+*/
+@property(nonatomic,strong) NSString *categoryId;
 
 #pragma mark 基础功能相关
 /**

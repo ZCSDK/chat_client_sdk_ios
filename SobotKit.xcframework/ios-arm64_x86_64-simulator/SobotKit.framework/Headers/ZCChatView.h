@@ -40,6 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)jumpDocumentVC:(UIViewController*)docVC;
 
+/// 输入区已根据键盘最终 frame 确认实际显隐状态。
+/// 控制器据此在手机紧凑横屏临时隐藏/恢复原导航类型。
+- (void)chatViewSystemKeyboardVisibleDidChange:(BOOL)visible
+                              compactLandscape:(BOOL)compactLandscape
+                                      duration:(NSTimeInterval)duration
+                                       options:(UIViewAnimationOptions)options;
+
 @end
 
 @interface ZCChatView : UIView

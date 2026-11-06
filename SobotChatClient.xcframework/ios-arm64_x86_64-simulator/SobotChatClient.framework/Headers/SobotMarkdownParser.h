@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)addHtmlToWebPage:(NSString *)html;
 
 
-/// 解析mark内容，并根据img标签拆分
+/// 拆分 Markdown 文本、图片和回答中的 HTML 媒体块。
+/// 视频识别完整的 <video>...</video> 或内含该标签的 <div data-video>...</div>，不会把裸视频 URL 提升为视频卡片；附件需符合既有 HTML 附件格式。
 /// - Parameter markdown: markdown文本
 +(NSMutableArray *)parseMarkdownBySplitImage:(NSString *)markdown;
 

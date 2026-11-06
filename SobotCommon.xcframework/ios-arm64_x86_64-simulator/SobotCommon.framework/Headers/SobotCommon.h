@@ -25,6 +25,10 @@
 #import <SobotCommon/SobotTextView.h>
 #import <SobotCommon/SobotImagePickerTools.h>
 #import <SobotCommon/SobotSheetView.h>
+#import <SobotCommon/SobotSystemSheetController.h>
+#import <SobotCommon/SobotSystemSheetSelectController.h>
+#import <SobotCommon/SobotWindowSheetView.h>
+#import <SobotCommon/SobotWindowSheetSelectView.h>
 #import <SobotCommon/SobotXHImageViewer.h>
 #import <SobotCommon/SobotEmojiLabel.h>
 #import <SobotCommon/SobotToast.h>
@@ -79,5 +83,3 @@ FOUNDATION_EXPORT double SobotCommonVersionNumber;
 FOUNDATION_EXPORT const unsigned char SobotCommonVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SobotCommon/PublicHeader.h>
-
-

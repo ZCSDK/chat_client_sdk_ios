@@ -85,6 +85,12 @@
        fail:(FailBlock) failBlock
      progress:(ProgressBlock) progressBlock;
 
+/// 幂等取消当前大模型 SSE。
+///
+/// 大模型请求使用固定订阅 Key，FIFO 调度器只能在当前请求已完成
+/// Parser/UI 收尾后调用本方法，避免取消回调与业务终帧重复结算。
++(void)cancelAIAgentStream;
+
 +(ZCLibHttpManager *) getZCHttpManager;
 
 // 取消 当前对应的文件上传的请求 删除缓存

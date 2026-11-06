@@ -87,7 +87,7 @@
 #define StatusBarHeight                     ([SobotUITools sobotGetStatusBarHeight])
 // 导航栏的高度
 #define isLandspace     !Sobot_IsPortrait
-#define NavLandspaceBarHeight               ([UIApplication sharedApplication].statusBarHidden?32.0:64.0)
+#define NavLandspaceBarHeight               ([SobotUITools sobotGetLandscapeNavBarHeight])
 
 //return self.navigationController.navigationBar.frame.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height;
 #define NavBarHeight                        (isLandspace ? NavLandspaceBarHeight : (Sobot_iPhoneX ? StatusBarHeight+[SobotUITools sobotGetNavigationBarHeight] : 64.0))

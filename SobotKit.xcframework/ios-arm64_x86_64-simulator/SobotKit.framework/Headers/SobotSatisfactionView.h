@@ -134,6 +134,12 @@ NS_ASSUME_NONNULL_BEGIN
 // sheet 外层 safeArea 稳定后，重新刷新横屏安全区布局。
 -(void)refreshSheetLandscapeSafeAreaLayout;
 
+/// Sheet 容器统一下发当前窗口尺寸、物理安全区和键盘遮挡状态。
+/// 仅影响 inSheetView=YES 的弹层模式，聊天消息中的内嵌评价保持原布局。
+- (void)applySheetContainerSize:(CGSize)containerSize
+                 safeAreaInsets:(UIEdgeInsets)safeAreaInsets
+                 keyboardOverlap:(CGFloat)keyboardOverlap;
+
 @end
 
 NS_ASSUME_NONNULL_END

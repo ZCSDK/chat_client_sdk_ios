@@ -131,6 +131,13 @@
 @property (nonatomic,assign) BOOL navcBarHidden;
 
 /**
+ * 使用系统导航栏时，是否把 SDK 导航背景延伸到系统导航栏上方区域。
+ * 默认 NO，由系统自行渲染状态栏、相机及折叠屏系统工具区域。
+ * 设置 YES 时沿用 SDK 顶部补色效果；仅在 navcBarHidden == NO 时生效。
+ **/
+@property (nonatomic,assign) BOOL enableSystemNavigationBarTopBackground;
+
+/**
  *   人工状态，是否可以发送位置
  【 注意：
  由于各家定位插件特别多，智齿没有实现选择位置功能，所以需要自行传递位置到SDK以及打开显示，步骤如下：

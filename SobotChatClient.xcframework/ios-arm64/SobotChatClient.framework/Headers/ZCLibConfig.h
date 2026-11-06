@@ -744,6 +744,10 @@
 
 @interface ZCLibOnlineCustomerParams : NSObject
 
+// 新增转人工客服ID 客服发送离线消息 的客服ID
+@property (nonatomic,strong) NSString *offlineMsgAdminId;
+
+
 // 指定客服
 @property (nonatomic,strong) NSString *chooseAdminId;
 /**

@@ -221,6 +221,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(BOOL)getIsIphonX;
 + (CGFloat)sobotGetStatusBarHeight;
 + (CGFloat)sobotGetNavigationBarHeight;
+/// 获取横屏自定义导航总高度：以当前 Scene 的状态栏显隐为准，保留旧导航高度下限并适配顶部安全区。
++ (CGFloat)sobotGetLandscapeNavBarHeight;
 
 
 

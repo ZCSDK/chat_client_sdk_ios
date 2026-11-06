@@ -154,7 +154,7 @@
 "商品" = "Commodity";
 "订单" = "Order";
 "由于服务到期，该功能已关闭" = "The feature has been turned off due to service expiration";
-"结束会话" = "End Chat";
+"结束会话" = "End session";
 "您可以" = "You can";
 "发送" = "Send";
 "提交" = "Submit";

@@ -8,6 +8,19 @@
 #import <SobotCommon/SobotCommon.h>
 #import <SobotChatClient/SobotChatClientCache.h>
 
+/**
+ * 大模型 SSE 后台短时保活与回前台历史恢复总开关。
+ *
+ * 1（默认）：启用 beginBackgroundTask 和前台历史对账。
+ * 0：编译期完全移除上述增量逻辑，恢复为改造前的 SSE 后台行为。
+ *
+ * 发包时可直接修改本默认值，也可在 Build Settings > Preprocessor Macros 中传入
+ * SOBOT_ENABLE_AI_BACKGROUND_STREAM_RECOVERY=0 覆盖，无需宿主增加后台 capability。
+ */
+#ifndef SOBOT_ENABLE_AI_BACKGROUND_STREAM_RECOVERY
+#define SOBOT_ENABLE_AI_BACKGROUND_STREAM_RECOVERY 1
+#endif
+
 // 国际化
 #define SobotKitLocalString(key) [SobotChatClientCache localKitString:key]
 #define SobotKitIsRTLLayout [SobotChatClientCache checkKitIsRTLLayout]

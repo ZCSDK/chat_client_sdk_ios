@@ -8,6 +8,10 @@
 #import <Foundation/Foundation.h>
 #import <SobotUI/SobotButton.h>
 #import <SobotUI/SobotBaseController.h>
+#import <SobotUI/SobotSystemSheetController.h>
+#import <SobotUI/SobotSystemSheetSelectController.h>
+#import <SobotUI/SobotWindowSheetView.h>
+#import <SobotUI/SobotWindowSheetSelectView.h>
 #import <SobotUI/SobotFontColor.h>
 #import <SobotUI/SobotBaseEntity.h>
 #import <SobotUI/SobotCache.h>
@@ -20,5 +24,3 @@ FOUNDATION_EXPORT double SobotUIVersionNumber;
 FOUNDATION_EXPORT const unsigned char SobotUIVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SobotUI/PublicHeader.h>
-
-

@@ -7,6 +7,7 @@
 
 #import <SobotCommon/SobotCommon.h>
 
+@class ZCKitInfo;
 
 /**ZCPageBlockType回调类型*/
 typedef NS_ENUM(NSInteger,ZCPageStateType) {
@@ -50,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 当前控制器内容区顶部 Y 坐标：系统导航取 safe area，自定义导航取自定义导航底部。
 - (CGFloat)sobot_contentTopY;
+
+/// 独立入口在 super init 之后才拿到 ZCKitInfo 时，重新固化本页导航配置快照。
+- (void)sobot_applyNavigationConfigurationFromKitInfo:(ZCKitInfo *)kitInfo;
 
 // 更新导航栏背景色和渐变色
 -(void)updateTopViewBgColor;

@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) UIColor *btnTitleColor;
 @property(nonatomic,strong)UIImage *clostBtnImg;
-// 是否启用横屏安全区自适配，默认 NO。当前由时区、区号二级弹窗开启，其他业务弹窗保持旧布局。
+// 是否启用折叠屏、横竖屏和物理安全区自适配，默认 YES；保留开关用于特殊宿主主动关闭。
 @property (nonatomic,assign) BOOL zc_enableLandscapeSafeAreaLayout;
 // 1 总结分类
 @property (nonatomic, strong)  void(^ChooseResultBlock) (id _Nullable item,NSString *names,NSString *ids);
@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)closeSheetView;
 
 -(void)reSetViewHeight;
-// 横竖屏旋转后由外层弹窗调用，刷新自身尺寸、safeArea 约束和列表宽度。
+// 兼容旧调用；刷新当前宿主尺寸、safeArea 约束和列表宽度。
 -(void)zc_refreshLayoutForCurrentWindow;
 
 

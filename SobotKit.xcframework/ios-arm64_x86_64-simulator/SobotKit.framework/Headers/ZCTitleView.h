@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 刷新UI是否是横屏
 -(void)setlayout:(BOOL)landspace;
 
+/// 系统导航栏会按 titleView 的固有宽度决定是否居中；折叠屏尺寸变化前先更新透明占位宽度。
+/// 自定义导航由外层约束决定宽度，调用本方法不会改变其布局。
+-(void)prepareForNavigationContainerWidth:(CGFloat)width;
+
 -(void)setLogoImgLayrightItem:(NSArray*)rightItem leftItem:(NSArray *)leftItem;
 
 // 设置文字颜色是否是黑或者白色

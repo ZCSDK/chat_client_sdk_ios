@@ -124,6 +124,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 +(SobotChatMessage *)createLocalMessage:(BOOL) isSender messageType:(SobotMessageType) type richType:(SobotMessageRichJsonType )richType action:(SobotMessageActionType ) action message:(NSDictionary * _Nullable ) message robot:(BOOL)robotAnswer config:(ZCLibConfig *) libConfig;
 
+/// 只识别没有可展示负载的 AI 文本气泡；转人工等业务事件仍由原回调处理。
++(BOOL)isEmptyAIReplyBubble:(SobotChatMessage * _Nullable)message;
+/// 给当前 AI 请求的回复写入本地展示标记，兼容服务端帧缺少 AI 身份字段。
++(void)markCurrentAIReplyCandidate:(SobotChatMessage * _Nullable)message;
+
 
 +(NSString *)getLastMessage:(SobotChatMessage *) chatMsg urlRegular:(NSString *)urlRegular;
 /**
@@ -149,6 +154,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) NSString *lastDate;
 @property (nonatomic,strong) NSString *lastMsg;
 @property (nonatomic,assign) int       unRead;
+/// 当前离页未读批次中第一条人工新消息的 msgId。
+/// 离页期间还可能插入 SSE 或状态消息，因此未读分割线不能再通过数组尾部倒推，
+/// 需要用该字段定位第一条真正的人工未读消息。
+@property (nonatomic,copy) NSString * _Nullable firstUnreadMsgId;
 @property (nonatomic,strong) NSString *uid;
 @property (nonatomic,strong) NSString *puid;
 @property (nonatomic,strong) NSString *lastCid;

@@ -11,10 +11,55 @@
 #import <SobotChatClient/ZCLibConfig.h>
 NS_ASSUME_NONNULL_BEGIN
 
+@class SobotChatMessage;
+
+/// 当前大模型流式请求的历史对账完成后通知 Kit；通知对象包含 appKey、uid、cid、requestId。
+FOUNDATION_EXPORT NSString * const SobotAIAgentHistoryReconciledNotification;
+/// 当前 AI 请求、排队任务及最终转人工交付均已收口；Kit 可重新检查尚未发出的补查。
+FOUNDATION_EXPORT NSString * const SobotAIAgentQueueIdleNotification;
+
 typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDictionary *_Nullable dict,NSString *_Nullable jsonString);
 
 /// <#Description#>
 @interface ZCLibServer : NSObject
+
+/// 在获得有效 uid/config 后显式准备当前大模型会话。
+/// 会话保持重新进入时会复用原 token，不会重复提交已入队请求。
++(void)prepareCurrentAIAgentSessionIfNeeded;
+
+/// 真正重建会话、退出登录或销毁 SDK 时统一废弃 AI active/pending。
+/// 普通离开聊天页不能调用该方法。
++(void)invalidateCurrentAIAgentSession;
+
+/// 真正发起用户手动转人工请求前，冻结当时已接受的 AI 批次。
++(void)beginAIAgentPreservationForTransfer;
+
+/// 转人工请求返回后结束“新 Context 自动加入保活批次”的时间窗。
++(void)endAIAgentPreservationForTransfer;
+
+/// 手动转人工已成功，将冻结批次切换为“人工态下旧 AI 只回显”。
++(void)markPreservedAIAgentBatchAsHumanContinuation;
+
+/// Kit 层用于识别人工态下的旧 AI 回调，避免重复转人工或改写人工会话状态。
++(BOOL)isAIAgentContinuationMessage:(nullable SobotChatMessage *)message;
+
+/// 查询当前会话未交付的大模型转人工指令；result 为 nil 表示请求或响应无效。
+/// 该接口返回的 needTransfer=true 会被服务端消费，调用方必须自行处理去重和后续转人工。
++(void)getAIAgentPendingTransferWithUid:(NSString *)uid
+                                     cid:(NSString *)cid
+                                  result:(void (^)(NSDictionary * _Nullable data))resultBlock;
+
+/// 只读当前 FIFO 和转人工交付状态；必须在主线程调用，不包含 Kit 自己的离页事件缓存。
++(BOOL)hasUnfinishedAIAgentWork;
+
+/// 已取得的补转结果复用原 FIFO 候选和边界；已有候选优先，后续有效 SSE 可覆盖补转候选。
+/// message 必须是独立快照；delivery 不得捕获可变会话身份，交付前仍需复核原会话。
+/// 必须在主线程调用；正常队列失效化会连同候选一起释放 delivery。
++(void)deliverPendingTransferMessage:(SobotChatMessage *)message delivery:(dispatch_block_t)delivery;
+
+/// Parser 的 delay 轮询收到当前 requestId 有效回包时刷新 watchdog。
+/// 该入口只供 SobotChatClient 内部使用，旧 requestId 调用会被忽略。
++(void)touchCurrentAIAgentRequestWithId:(NSString *)requestId;
 
 /// 查询appkey企业配置信息
 /// @param appkey 当前appkey
