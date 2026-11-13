@@ -83,3 +83,7 @@ FOUNDATION_EXPORT double SobotCommonVersionNumber;
 FOUNDATION_EXPORT const unsigned char SobotCommonVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SobotCommon/PublicHeader.h>
+
+// OC HTML 富文本核心和 SDK 适配入口，所有自定义符号使用 Sobot 前缀。
+#import "SobotHTMLParser.h"
+#import "SobotHTMLRenderer.h"

@@ -21,6 +21,18 @@
 #define SOBOT_ENABLE_AI_BACKGROUND_STREAM_RECOVERY 1
 #endif
 
+/**
+ * REQ-7132210170 在线访客附件类型限制发布开关（不作用于留言）。
+ * 1（默认）：启用上传前类型校验及文件单选；0：跳过本地类型校验并恢复文件多选。
+ * 原有大小限制、服务端上传拒绝及失败重试不受开关影响。
+ * 可修改此默认值，或在编译 SobotKit 时通过 Preprocessor Macros 传入
+ * SOBOT_ENABLE_VISITOR_FILE_TYPE_LIMIT=0；仅修改宿主 App 的宏不会改变已编译的 SDK。
+ * 配置模型字段/解析和语言资源始终保留，避免切换开关改变模型接口。
+ */
+#ifndef SOBOT_ENABLE_VISITOR_FILE_TYPE_LIMIT
+#define SOBOT_ENABLE_VISITOR_FILE_TYPE_LIMIT 1
+#endif
+
 // 国际化
 #define SobotKitLocalString(key) [SobotChatClientCache localKitString:key]
 #define SobotKitIsRTLLayout [SobotChatClientCache checkKitIsRTLLayout]

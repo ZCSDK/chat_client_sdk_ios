@@ -203,6 +203,11 @@ typedef NS_ENUM(NSInteger, SobotNavigationTitleLayoutMode) {
 
 #pragma mark - 阶段一 · 自适应布局接管(opt-in,默认关闭)
 
+/// 是否由 Common 接管布局生命周期；默认 YES，保持现有 SDK 页面行为。
+/// 旧 App 父类可覆盖并返回 NO，仍调用 UIKit 生命周期，但不创建 Common 内容 guide、
+/// 不干预导航显隐/安全区/状态栏。必须在 viewDidLoad 前确定，不能在页面存活中切换。
+- (BOOL)sobot_usesManagedLayoutLifecycle;
+
 /// 启用自适应布局接管(默认 NO,opt-in)
 /// 想吃 sizeClass / safeArea 钩子 + Environment 的 VC,在自己的 viewDidLoad super 之后设 YES
 @property (nonatomic, assign) BOOL enableAdaptiveLayout;

@@ -348,3 +348,8 @@
 "重发" = "Invia di nuovo";
 "最多添加 10 个附件" = "Aggiungi al massimo 10 allegati";
 "不支持该类型的文件上传" = "Questo tipo di file non è supportato";
+/* 在线附件上传前的本地类型校验提示；服务端上传失败仍使用原有文案。 */
+"文件类型不支持" = "Questo tipo di file non è supportato";
+
+/* 在线附件类型拒绝提示：%@ 为带点的文件后缀。 */
+"不支持发送 %@ 类型文件" = "L’invio di file di tipo %@ non è supportato";

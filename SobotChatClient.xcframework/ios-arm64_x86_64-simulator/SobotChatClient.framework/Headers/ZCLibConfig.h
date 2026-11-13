@@ -18,6 +18,14 @@
  */
 @interface ZCLibConfig : NSObject
 
+// 配置字段与解析始终保留；发布宏仅控制 SobotKit 行为，切换时不改变模型接口。
+/// 在线访客附件类型模式：0 按系统禁止名单校验，1 仅允许企业生效名单；不自动作用于留言。
+@property (nonatomic, assign) NSInteger visitorFileTypeMode;
+/// mode=1 使用的允许后缀；接口返回值已剔除系统禁止类型，缺失时按空名单保存。
+@property (nonatomic, copy) NSArray<NSString *> *visitorAllowedFileTypes;
+/// mode=0 使用的系统禁止后缀；客户端不硬编码或补充禁止类型。
+@property (nonatomic, copy) NSArray<NSString *> *legalFileTypeList;
+
 // 4.6.3 新增 暂无客服接待的昵称
 // 无人接待昵称开关。0=关闭，1=开启。null 时按 0 处理
 @property(nonatomic,copy)NSString *topBarNoStaffNickname;

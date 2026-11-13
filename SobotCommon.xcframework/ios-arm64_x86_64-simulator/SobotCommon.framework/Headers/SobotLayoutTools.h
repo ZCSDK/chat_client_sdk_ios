@@ -209,6 +209,13 @@ NSArray<NSLayoutConstraint *> *sobotLayoutAnchorSetSize(UIView *view, CGSize siz
 /// view 在 container 内 centerX + centerY 居中。已 activate。
 NSArray<NSLayoutConstraint *> *sobotLayoutAnchorCenterIn(UIView *view, UIView *container);
 
+/// 复用自绘导航的水平安全区校正算法，供公共父类及其 App 宿主共同使用。
+/// 仅计算差值，不修改控制器；调用方只应在系统导航隐藏时使用，并自行保存/撤销差值。
+/// @param controller 要校正的页面或容器；只读取该控制器所属 Window 的物理安全区。
+/// @param appliedCorrection 此前由调用方施加的左右修正，用于排除自身影响；top/bottom 不参与。
+/// @return 下一次应施加的左右修正（不是最终 safeArea），真实遮挡与业务已有 inset 会保留。
+UIEdgeInsets sobotLayoutHiddenNavigationHorizontalCorrection(UIViewController *controller, UIEdgeInsets appliedCorrection);
+
 @end
 
 NS_ASSUME_NONNULL_END
