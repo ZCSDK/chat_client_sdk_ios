@@ -392,6 +392,19 @@ typedef void (^ChangeLanguageBlock)(ZCLanguageModel *_Nonnull model,NSDictionary
 /// 在评价弹窗/入口已经实际展示后记录邀评次数。
 /// 只记录自动邀评，不用于主动评价或客服手动邀评；失败仅写日志，不影响用户继续评价。
 -(void)recordInviteFrequencyIfNeeded;
+#if SOBOT_ENABLE_NEW_EVALUATION
+// 本次评价改动仅在开启宏时编译；关闭保留原流程。
+/// 新SYSTEM查询：复用loading/短超时；current为NO时调用方只释放状态，不操作旧页面。
+-(void)checkSystemInviteWithParams:(SobotSatisfactionParams *)params result:(void (^)(BOOL allowed, BOOL current))result;
+/// 取消指定操作的等待及后续展示；仅清理仍属于该操作的上下文，不取消其他入口的请求。
+-(void)cancelSystemInviteWithParams:(SobotSatisfactionParams *)params;
+/// 资格允许后沿原配置加载和Sheet事件展示，保留Close导航语义；失败交还调用方结束返回。
+-(void)showSystemInviteWithParams:(SobotSatisfactionParams *)params result:(void (^)(BOOL shown, BOOL current))result;
+/// SYSTEM弹窗实际展示后记频一次，使用本次参数中的原uid。
+-(void)recordSystemInviteWithParams:(SobotSatisfactionParams *)params;
+/// SYSTEM卡片首次实际展示后记频，标记保存到消息，避免Cell复用导致重复。
+-(void)recordSystemInviteMessage:(SobotChatMessage *)message;
+#endif
 // 邀请评价，提交
 - (void)commitSatisfactionWithIsResolved:(int)isResolved Rating:(int)rating problem:(NSString *) problem scoreFlag:(float)scoreFlag scoreExplain:(NSString * _Nullable) scoreExplain checkScore:(ZCLibSatisfaction *) model;
 

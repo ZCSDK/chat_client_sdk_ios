@@ -63,6 +63,17 @@ typedef NS_ENUM(NSInteger, SobotSatisfactionFromSrouce) {
 
 // 用户ID
 @property (nonatomic,strong) NSString * _Nullable uid;
+#if SOBOT_ENABLE_NEW_EVALUATION
+// 本次评价改动仅在开启宏时编译；关闭保留原流程。
+// 本次人工邀请所属的原会话；主动评价仍沿原配置取值。
+@property (nonatomic,copy) NSString * _Nullable cid;
+// 协议来源MANUAL/SYSTEM，与showType的人工UI类型及fromSource导航来源分开。
+@property (nonatomic,copy) NSString * _Nullable evaluationEntry;
+// 客服209的原msgId；SDK本地SYSTEM邀请和主动评价不传。
+@property (nonatomic,copy) NSString * _Nullable inviteMsgId;
+// 本次SYSTEM展示是否已发起记频；不以网络成功与否重复计数。
+@property (nonatomic,assign) BOOL inviteFrequencyRecorded;
+#endif
 @property (nonatomic,strong) NSString * _Nullable ticketld;
 
 

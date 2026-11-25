@@ -140,6 +140,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SobotLoginEntity : SobotBaseEntity
 
+/// 客户分类总开关，登录成功后查询接口并更新，YES 使用新版分类功能。
+@property(nonatomic,assign) BOOL customerCategoryEnabled;
+
 // //0关闭 1开启   会话摘要开关
 @property(nonatomic,assign)int cvtDigestButton ;
 

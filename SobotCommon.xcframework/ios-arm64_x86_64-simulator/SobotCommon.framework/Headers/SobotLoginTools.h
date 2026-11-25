@@ -118,6 +118,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - resultBlock: 登录结果
 -(void)loginWithCompanyToken:(NSString *)companyToken email:(NSString *) email  appParams:(SobotLoginParams * _Nullable) appParams result:(void (^)(NSInteger code, NSDictionary * _Nullable, NSString * _Nullable))resultBlock;
 
+/// 查询当前登录会话的客户分类开关；请求失败沿用默认关闭。
+/// completion 在主线程回调，currentSession 表示请求仍属于当前有效会话，不代表接口成功。
+- (void)queryCustomerCategoryConfigWithCompletion:(void (^)(BOOL currentSession))completion;
+
 /// 获取登录信息
 /// - Parameter resultBlock: 如果判断当前支持V6，会自动获取accessToken
 -(void)getLoginUserInfo:(void (^)(NSInteger code,NSDictionary * _Nullable dict,NSString * _Nullable msg))resultBlock;

@@ -267,6 +267,12 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
                              failed:(void(^)(NSString *errorMessage,ZCNetWorkCode errorCode)) failedBlock;
 
 
+/// 查询当前留言方式；只接受 1 工单或 2 离线，失败统一交由调用方使用初始化方式兜底。
+/// uid 为当前访客，groupId 无值时明确发送空字符串；completion 始终在主线程回调。
++(void)resolveOwnedLeaveWithUid:(NSString *)uid
+                       groupId:(NSString *)groupId
+                    completion:(void (^)(BOOL success, NSInteger msgToTicketFlag))completion;
+
 /// 获取 选择留言模版
 /// @param config config description
 /// @param uid uid description
@@ -715,6 +721,12 @@ typedef void(^SobotKitResultBlock)(ZCNetWorkCode code,id _Nullable obj,NSDiction
  @param resultBlock code 为接口调用结果；isComment 为服务端可邀评状态；msg 为服务端返回说明。
  */
 +(void)isComment:(ZCLibConfig *)config type:(NSInteger)type commentType:(NSInteger)commentType result:(void (^)(ZCNetWorkCode code, NSInteger isComment, NSString *msg))resultBlock;
+
+#if SOBOT_ENABLE_NEW_EVALUATION
+// 本次评价改动仅在开启宏时编译；关闭保留原流程。
+/// 新邀请查询使用原身份快照；MANUAL为0、SYSTEM为1，本地自动邀请不传inviteMsgId。
++(void)isComment:(ZCLibConfig *)config type:(NSInteger)type commentType:(NSInteger)commentType evaluationEntry:(NSString * _Nullable)evaluationEntry inviteMsgId:(NSString * _Nullable)inviteMsgId result:(void (^)(ZCNetWorkCode code, NSInteger isComment, NSString *msg))resultBlock;
+#endif
 
 /**
  记录一次人工会话自动邀评次数。

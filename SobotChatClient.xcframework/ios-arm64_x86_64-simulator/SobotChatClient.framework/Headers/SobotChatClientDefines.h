@@ -9,6 +9,21 @@
 #import <SobotChatClient/SobotChatClientCache.h>
 
 /**
+ * 新版满意度邀评流程发布开关，默认关闭。
+ * 0：保持2026-11-20需求开始前的评价行为，包含原资格查询和原记频。
+ * 1：启用MANUAL/SYSTEM来源、新查询参数、loading及展示后记频。
+ * SobotChatClient与SobotKit须使用相同取值重新编译；宿主宏不改变预编译SDK。
+ */
+#ifndef SOBOT_ENABLE_NEW_EVALUATION
+#define SOBOT_ENABLE_NEW_EVALUATION 0
+#endif
+
+// 构建时只接受0或1，避免错误配置意外开启新需求。
+#if SOBOT_ENABLE_NEW_EVALUATION != 0 && SOBOT_ENABLE_NEW_EVALUATION != 1
+#error SOBOT_ENABLE_NEW_EVALUATION_must_be_0_or_1
+#endif
+
+/**
  * 大模型 SSE 后台短时保活与回前台历史恢复总开关。
  *
  * 1（默认）：启用 beginBackgroundTask 和前台历史对账。
